@@ -31,7 +31,7 @@
 *.out
 *.app
 
-# Custom
+# Customs
 *.bak
 .vs
 x64

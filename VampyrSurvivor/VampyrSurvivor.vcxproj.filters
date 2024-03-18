@@ -13,10 +13,333 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Manager">
+      <UniqueIdentifier>{fe535a1f-6ca9-4da4-892d-8fa90c697c6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Input">
+      <UniqueIdentifier>{461ab894-5acf-4ec0-9f42-cda5f186932d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Actor">
+      <UniqueIdentifier>{37440996-82de-4858-b3c1-6392d08ebbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Font">
+      <UniqueIdentifier>{2a0e0eab-3897-4335-a97f-ded557dae633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\FXs">
+      <UniqueIdentifier>{c0b45e1e-dbd4-42ff-91e0-a303de0516e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Menu">
+      <UniqueIdentifier>{11bf6aa3-9c46-46ea-aefc-f4fc6adcf6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Music">
+      <UniqueIdentifier>{1c0ec1d9-e5cc-4e15-91e0-6b1dacfe272a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Sound">
+      <UniqueIdentifier>{65ed0c82-0d40-435a-b983-18baf507bd14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Texture">
+      <UniqueIdentifier>{738ad510-52cf-4374-9494-95076260b040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Timer">
+      <UniqueIdentifier>{e4a51bf9-4132-4c7e-9d77-aa0a9468d8a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Manager\Uis">
+      <UniqueIdentifier>{3d13e852-9024-468d-8f22-3c25f7cc3b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Component">
+      <UniqueIdentifier>{7219ccbb-396e-4299-b865-425617876913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Widget">
+      <UniqueIdentifier>{1ffafe5f-1413-4f51-8866-6a156b4c62d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Object">
+      <UniqueIdentifier>{d403ccea-55a7-4a7e-b2f0-880363e016ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Object\Actor">
+      <UniqueIdentifier>{85107906-e496-411d-b1b9-9ba151d7f6d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\SoundSystem">
+      <UniqueIdentifier>{203c510c-075d-457d-b2f0-adda670ff206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Canvas">
+      <UniqueIdentifier>{770831e9-b74a-4a44-ab53-84b8ac7dcdb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Kismet">
+      <UniqueIdentifier>{46a6e156-26a3-459d-b233-4ddc0e4882ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Macro">
+      <UniqueIdentifier>{2faa02f8-d34c-45b9-99d9-ae93cab542c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Menu">
+      <UniqueIdentifier>{aed2ba2b-166f-4c1e-8a53-4d6bdaedf2bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Action.cpp">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionMap.cpp">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorManager.cpp">
+      <Filter>Fichiers sources\Manager\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Fichiers sources\Manager\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="FontData.cpp">
+      <Filter>Fichiers sources\Manager\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Fx.cpp">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClCompile>
+    <ClCompile Include="FxData.cpp">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClCompile>
+    <ClCompile Include="FxManager.cpp">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuManager.cpp">
+      <Filter>Fichiers sources\Manager\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicData.cpp">
+      <Filter>Fichiers sources\Manager\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicManager.cpp">
+      <Filter>Fichiers sources\Manager\Music</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundData.cpp">
+      <Filter>Fichiers sources\Manager\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Fichiers sources\Manager\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureData.cpp">
+      <Filter>Fichiers sources\Manager\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Fichiers sources\Manager\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>Fichiers sources\Manager\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Fichiers sources\Manager\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Fichiers sources\Manager\Uis</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationComponent.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionComponent.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementComponent.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="TextObject.cpp">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="TextWidget.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeWidget.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressLabel.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeObject.cpp">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundSystem.cpp">
+      <Filter>Fichiers sources\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Canvas.cpp">
+      <Filter>Fichiers sources\Canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="InteractableActor.cpp">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Kismet.cpp">
+      <Filter>Fichiers sources\Kismet</Filter>
+    </ClCompile>
+    <ClCompile Include="Macro.cpp">
+      <Filter>Fichiers sources\Macro</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Widget.cpp">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Singleton.h">
+      <Filter>Fichiers sources\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="IManagable.h">
+      <Filter>Fichiers sources\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="IManager.h">
+      <Filter>Fichiers sources\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionMap.h">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Fichiers sources\Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorManager.h">
+      <Filter>Fichiers sources\Manager\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Fichiers sources\Manager\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="FontData.h">
+      <Filter>Fichiers sources\Manager\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Fx.h">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClInclude>
+    <ClInclude Include="FxData.h">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClInclude>
+    <ClInclude Include="FxManager.h">
+      <Filter>Fichiers sources\Manager\FXs</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuManager.h">
+      <Filter>Fichiers sources\Manager\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicData.h">
+      <Filter>Fichiers sources\Manager\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicManager.h">
+      <Filter>Fichiers sources\Manager\Music</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundData.h">
+      <Filter>Fichiers sources\Manager\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Fichiers sources\Manager\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureData.h">
+      <Filter>Fichiers sources\Manager\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Fichiers sources\Manager\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Fichiers sources\Manager\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.h">
+      <Filter>Fichiers sources\Manager\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Fichiers sources\Manager\Uis</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationComponent.h">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionComponent.h">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementComponent.h">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="TextObject.h">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="TextWidget.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeWidget.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressLabel.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeObject.h">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundSystem.h">
+      <Filter>Fichiers sources\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="Canvas.h">
+      <Filter>Fichiers sources\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="InteractableActor.h">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Kismet.h">
+      <Filter>Fichiers sources\Kismet</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Fichiers sources\Macro</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Widget.h">
+      <Filter>Fichiers sources\Widget</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Fichiers sources\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
