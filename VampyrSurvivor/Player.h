@@ -38,6 +38,7 @@ public:
 	}
 };
 
+class PathfindingComponent;
 
 class Player : public Actor
 {
@@ -45,6 +46,11 @@ class Player : public Actor
 	Vector2f direction;
 	PlayerStat* stat;
 	int dammage;
+
+public:
+	//TODO Remove(Test)
+	PathfindingComponent* pathComp;
+
 
 public:
 	Player();

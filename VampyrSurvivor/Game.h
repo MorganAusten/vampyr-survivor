@@ -49,8 +49,8 @@ struct Brightness
 class Game
 {
 	static RenderWindow window;;
+	static Map* map;
 	Player* player;
-	Map* map;
 	ShapeObject* mouse;
 private:
 	static Brightness* brightness;
@@ -70,10 +70,11 @@ public:
 	}
 
 public:
-	Game();
+	Game() = default;
 	~Game();
 
 public:
+	inline static Map* GetMap() { return map; }
 	void Start();
 	void Init();
 	void InitMouseSprite();

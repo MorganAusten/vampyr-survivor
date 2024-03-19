@@ -12,6 +12,10 @@
 using namespace std;
 using namespace sf;
 
+
+#pragma warning (disable :4244) // warning cast argument T
+#pragma warning (disable :26495) // warning Always initialize
+
 #define MAX_VALUE 3.40282346638e38f;
 
 #define SCREEN_WIDTH 1280
@@ -28,9 +32,10 @@ void Normalize(Vector2f& _vector);
 float Distance(const float _first, const float _second);
 float Distance(const Vector2f& _first, const Vector2f& _second);
 float Distance(const float _first, const float _second);
-void SetOriginAtMiddle(Shape* _shape);
+//void SetOriginAtMiddle(Shape* _shape);
 string GetLevelFromIndex(const int _index);
 vector<string> GetWords(const string& _text, const bool _withSpaces = false);
+
 static inline float Randn()
 {
 	return -1 + 2 * ((float)rand()) / RAND_MAX;
@@ -56,6 +61,15 @@ bool Contains(T* _valueToFind, const vector<T*>& _vector)
 	}
 
 	return false;
+}
+
+template<typename T>
+vector<T*> Reverse(vector<T*> _vector)
+{
+	vector<T*> _result;
+	for (int i = _vector.size() - 1, x = 0; i >= 0; i--, x++)
+		_result.push_back(_vector[x]); 
+	return _result;
 }
 
 template <typename T>

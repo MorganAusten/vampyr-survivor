@@ -4,14 +4,13 @@
 #include "TimerManager.h"
 #include "TextureManager.h"
 #include "MenuManager.h"
+#include "PathfindingComponent.h"
 #include "HUD.h"
 
 RenderWindow Game::window;
 Brightness* Game::brightness;
+Map* Game::map;
 
-Game::Game()
-{
-}
 
 Game::~Game()
 {
@@ -20,7 +19,11 @@ Game::~Game()
 void Game::Start()
 {
 	player = new Player("Player",ShapeData());
-	map = new Map();
+	Game::map = new Map();
+	//TODO remove(test)
+	player->pathComp = new PathfindingComponent(player);
+	player->pathComp->ComputeNewPath();
+	//
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);

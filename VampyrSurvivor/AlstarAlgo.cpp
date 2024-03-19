@@ -1,8 +1,9 @@
 #include "AlstarAlgo.h"
 #include "Tile.h"
+#include "Game.h"
 #include "Map.h"
 
-void AlstarAlgo::ComputePath(Tile* _start, Tile* _end)
+vector<Tile*> AlstarAlgo::ComputePath(Tile* _start, Tile* _end)
 {
     _start->ResetTileCost();
     vector<Tile*> _openList = vector<Tile*>(), _closedList = vector<Tile*>();
@@ -17,17 +18,14 @@ void AlstarAlgo::ComputePath(Tile* _start, Tile* _end)
         _closedList.push_back(_current);
         if (_current == _end)
         {
-            //correctPath = GetFinalPath(_start, _end);
-            //TODO return final path
-            return;
+            correctPath = GetFinalPath(_start, _end);
+            return correctPath;
         }
         //Parmis les points liés a current, on checks ceux qu'on peut mettre dans l'open liste
         for (int i = 0; i < _current->pathfindingParam.successors.size(); i++)
         {
-            Tile* _next = _current->pathfindingParam.map->GetGrid()[_current->pathfindingParam.successors[i]];
-            for (Tile* _tile : _closedList)
-                
-            if (Contains(_next,_closedList))
+            Tile* _next = Game::GetMap()->GetGrid()[_current->pathfindingParam.successors[i]];
+            if (Contains(_next,_closedList) || !_next->pathfindingParam.navigable)
                 continue;
             //On calcul le coût:
             float _hCost = Distance(_current->GetShapePosition(), _next->GetShapePosition());
@@ -41,4 +39,24 @@ void AlstarAlgo::ComputePath(Tile* _start, Tile* _end)
             }
         }
     }
+    return vector<Tile*>();
+}
+
+vector<Tile*> AlstarAlgo::GetFinalPath(Tile* _start, Tile* _end)
+{
+    vector<Tile*> _path = vector<Tile*>();
+    //for (int i = 0; i < _path.size(); i++)
+    //    cout << _path[i]->ToString(_path[i]) << endl;
+    Tile* _current = _end;
+    _path.push_back(_end);
+    while (_current != _start)
+    {
+        _path.push_back(_current->pathfindingParam.parent);
+        _current = _current->pathfindingParam.parent;
+    }
+    vector<Tile*> _result = Reverse(_path);
+    //Check pour voir si la fonction reverse marche bien
+    //for (int i = 0; i < _path.size(); i++)
+    //    cout << _result[i]->ToString(_result[i]) << endl;
+    return _result;
 }

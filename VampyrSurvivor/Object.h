@@ -22,7 +22,7 @@ class Object
 {
 public:
 	virtual Drawable* GetDrawable() const = 0;
-
+	virtual std::string ToString(Object* _object);
 public:
 	virtual ~Object() {};
 };

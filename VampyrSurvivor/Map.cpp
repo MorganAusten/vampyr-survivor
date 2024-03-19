@@ -1,13 +1,13 @@
 #include "Map.h"
 #include "Macro.h"
 #include "Barrier.h"
+#include "PathfindingComponent.h"
+#include "Player.h"
 
 Map::Map()
 {
 	InitMap();
 }
-
-
 
 void Map::InitMap()
 {
@@ -21,7 +21,7 @@ void Map::InitMap()
 	map<char, function<void(const Vector2f& _position)>> _map =
 	{
 		//Chaque actor est draw dans le update du actorManager, donc quand on créer un actor et qu'il se register, ça le draw automatiquement 
-		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position)); }},
+		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position,false)); }},
 		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }},
 		{'B',[this](const Vector2f& _position) { new Barrier(_position); grid.push_back(new Tile(TT_PATH,_position));}},
 	};
@@ -55,14 +55,16 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 		_startPos.y++;
 	}
 	SetSuccessor();
+
 }
 
 void Map::SetSuccessor()
 {
+	cout << size << endl;
 	for (int i = 0; i < size * size; i++)
 	{
 		bool _canRight = i % size != size - 1,
-			_canTop = i < size,
+			_canTop = i > size-1 ,
 			_canDown = i < (size * size) - size,
 			_canLeft = i % size != 0;
 		if (_canRight)
@@ -72,19 +74,21 @@ void Map::SetSuccessor()
 		if (_canTop)
 		{
 			grid[i]->AddSuccessor(i - size);
-			if (_canRight)
-				grid[i]->AddSuccessor((i + 1 - size));
-			if (_canLeft)
-				grid[i]->AddSuccessor((i - 1 - size));
+			//if (_canRight)
+			//	grid[i]->AddSuccessor((i + 1 - size));
+			//if (_canLeft)
+			//	grid[i]->AddSuccessor((i - 1 - size));
 		}
 		if (_canDown)
 		{
 			grid[i]->AddSuccessor(i + size);
-			if (_canRight)
-				grid[i]->AddSuccessor((i + 1 + size));
-			if (_canLeft)
-				grid[i]->AddSuccessor((i - 1 + size));
+			//if (_canRight)
+			//	grid[i]->AddSuccessor((i + 1 + size));
+			//if (_canLeft)
+			//	grid[i]->AddSuccessor((i - 1 + size));
 		}
+		cout << "modulo : " << i % size << endl <<  grid[i]->ToString(grid[i]) << " " << i + 1 << " successors : " << grid[i]->pathfindingParam.successors.size() <<
+			" Pos : (" << grid[i]->GetShapePosition().x  <<","<< grid[i]->GetShapePosition().y << ")" << " Navigable : " << grid[i]->pathfindingParam.navigable << endl;
 	}
 }
 

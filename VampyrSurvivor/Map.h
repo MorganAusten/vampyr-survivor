@@ -10,6 +10,7 @@ class Map
 	int size = 0;
 	bool sizeSet = false;
 	vector<Tile*> grid;
+	//Portal portal;
 public:
 	Map();
 private:

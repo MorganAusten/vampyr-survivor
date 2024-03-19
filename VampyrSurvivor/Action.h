@@ -34,22 +34,9 @@ struct InputData
 
 	InputData() = default;
 
-	InputData(ActionType _type, GameControllerButtons _buttons, function<void()> _callback)
-	{
-		type = _type;
-		buttons = _buttons;
-		callback = callback;
-	}
-	InputData(ActionType _type, int _key)
-	{
-		type = _type;
-		key = _key;
-	}
-	InputData(ActionType _type, GameControllerAxes _axes)
-	{
-		type = _type;
-		axes = _axes;
-	}
+	InputData(ActionType _type, int _key);
+	InputData(ActionType _type, GameControllerAxes _axes);
+	InputData(ActionType _type, GameControllerButtons _buttons, function<void()> _callback);
 };
 
 

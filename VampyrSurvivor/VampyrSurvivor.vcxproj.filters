@@ -225,6 +225,9 @@
     <ClCompile Include="PathfindingComponent.cpp">
       <Filter>Fichiers sources\Component</Filter>
     </ClCompile>
+    <ClCompile Include="Barrier.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -379,6 +382,9 @@
     </ClInclude>
     <ClInclude Include="PathfindingComponent.h">
       <Filter>Fichiers sources\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Barrier.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
