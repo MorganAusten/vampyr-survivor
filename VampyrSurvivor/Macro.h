@@ -14,6 +14,7 @@ using namespace sf;
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
+#define TILE_SIZE Vector2i(50, 50)
 
 #define STRING_ID(name) name + to_string(GetUniqueID())
 #define SIZE(vector) static_cast<int>(vector.size())
