@@ -137,6 +137,7 @@
     <ClCompile Include="AlstarAlgo.cpp" />
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimationComponent.cpp" />
+    <ClCompile Include="Barrier.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
@@ -187,6 +188,7 @@
     <ClInclude Include="AlstarAlgo.h" />
     <ClInclude Include="Animation.h" />
     <ClInclude Include="AnimationComponent.h" />
+    <ClInclude Include="Barrier.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="CollisionComponent.h" />
