@@ -18,7 +18,6 @@ void Game::Start()
 {
 	new Player();
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
-	new Map();
 }
 
 void Game::Init()
