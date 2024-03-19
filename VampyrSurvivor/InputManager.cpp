@@ -15,7 +15,7 @@ bool InputManager::Update(RenderWindow& _window)
 	Event _event;
 	while (_window.pollEvent(_event))
 	{
-		if (_event.type == Event::Closed) return false;
+		if (_event.type == Event::Closed) _window.close();
 		if (_event.type == Event::Resized)
 		{
 			//

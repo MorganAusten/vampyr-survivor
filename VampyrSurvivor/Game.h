@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
+#include "Map.h"
 #include "Player.h"
 
 using namespace std;
