@@ -1,5 +1,11 @@
-###P###
-###P###
-PPPPPPP
-###P###
-###P###
+##P##P##P##
+##P##P##P##
+PPPPBPBPPPP
+##P##P##P##
+##B##P##B##
+PPPPPPPPPPP
+##B##P##B##
+##P##P##P##
+PPPPBPBPPPP
+##P##P##P##
+##P##P##P##

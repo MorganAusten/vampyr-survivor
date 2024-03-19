@@ -1,5 +1,6 @@
 #include "Map.h"
 #include "Macro.h"
+#include "Barrier.h"
 
 Map::Map()
 {
@@ -21,7 +22,8 @@ void Map::InitMap()
 	{
 		//Chaque actor est draw dans le update du actorManager, donc quand on créer un actor et qu'il se register, ça le draw automatiquement 
 		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position)); }},
-		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }}
+		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }},
+		{'B',[this](const Vector2f& _position) { new Barrier(_position); grid.push_back(new Tile(TT_PATH,_position));}},
 	};
 
 	string _line;
@@ -43,7 +45,7 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 				const float _positionX = (float)_startPos.x * (float)TILE_SIZE.x;
 				const float _positionY = (float)_startPos.y * (float)TILE_SIZE.y;
 				_callback(Vector2f(_positionX, _positionY));
-				size++;
+				if (!sizeSet) size++;
 			}
 			_startPos.x++;
 		}
