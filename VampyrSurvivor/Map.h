@@ -7,12 +7,17 @@ using namespace std;
 
 class Map
 {
-	vector<Tile*> tiles;
-
+	int size = 0;
+	bool sizeSet = false;
+	vector<Tile*> grid;
 public:
 	Map();
-
+private:
+	void InitMap();
+	void GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std::function<void(const sf::Vector2f& _position)>>& _map, sf::Vector2i& _startPos);
+	void SetSuccessor();
 public:
-	void GenerateMap();
+	inline vector<Tile*> GetGrid()const { return grid; }
+	void ResetGridCost();
 };
 
