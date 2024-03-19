@@ -3,6 +3,11 @@
 #include "Timer.h"
 #include "Macro.h"
 
+Actor::Actor()
+{
+
+}
+
 Actor::Actor(const string& _name, const ShapeData& _data, const CollisionType& _collisionType)
 	: ShapeObject(_data), IManagable(_name)
 {

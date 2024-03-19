@@ -94,6 +94,7 @@ public:
 		if (!Exist(_key)) return nullptr;
 		return allValues[_key];
 	}
+
 	map<Key, Value*> GetAll() const
 	{
 		return allValues;

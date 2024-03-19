@@ -50,7 +50,6 @@ class Game
 {
 	static RenderWindow window;;
 private:
-	static Player* player;
 	static Brightness* brightness;
 
 public:
@@ -58,14 +57,12 @@ public:
 	{
 		return window;
 	}
+
 	static Vector2f GetWindowSize()
 	{
 		return Vector2f(window.getSize());
 	}
-	static Player* GetPlayer()
-	{
-		return player;
-	}
+
 	static Brightness* GetBrightness()
 	{
 		return brightness;
