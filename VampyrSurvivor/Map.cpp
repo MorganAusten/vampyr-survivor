@@ -12,7 +12,7 @@ void Map::GenerateMap()
 	ifstream _in = ifstream("Assets/map.txt");
 	if (!_in)
 	{
-		cerr << "Erreur de chargementdu lobby ! " << endl;
+		cerr << "Erreur de chargement de la map ! " << endl;
 		return;
 	}
 
@@ -23,7 +23,7 @@ void Map::GenerateMap()
 	};
 
 	string _line;
-	Vector2i _startPos = Vector2i(0, 0);
+	Vector2i _startPos = Vector2i(0,0);
 
 	while (getline(_in,_line))
 	{
@@ -33,7 +33,7 @@ void Map::GenerateMap()
 			if (_callback)
 			{
 				const float _positionX = (float)_startPos.x * (float)TILE_SIZE.x;
-				const float _positionY = (float)_startPos.x * (float)TILE_SIZE.x;
+				const float _positionY = (float)_startPos.y * (float)TILE_SIZE.y;
 				_callback(Vector2f(_positionX, _positionY));
 			}
 			_startPos.x++;

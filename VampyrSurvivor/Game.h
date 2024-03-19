@@ -49,6 +49,7 @@ struct Brightness
 class Game
 {
 	static RenderWindow window;;
+	Map* map;
 private:
 	static Brightness* brightness;
 

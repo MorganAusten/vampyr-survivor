@@ -73,6 +73,9 @@
     <Filter Include="Fichiers sources\Menu">
       <UniqueIdentifier>{aed2ba2b-166f-4c1e-8a53-4d6bdaedf2bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Map">
+      <UniqueIdentifier>{00ab967d-f585-4895-a9ac-a180a7af8643}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -204,11 +207,11 @@
     <ClCompile Include="Object.cpp">
       <Filter>Fichiers sources\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Tile.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Fichiers sources\Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -347,11 +350,11 @@
     <ClInclude Include="Game.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers sources\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Fichiers sources\Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
