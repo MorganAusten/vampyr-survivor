@@ -73,6 +73,15 @@
     <Filter Include="Fichiers sources\Menu">
       <UniqueIdentifier>{aed2ba2b-166f-4c1e-8a53-4d6bdaedf2bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Object\Actor\Entity">
+      <UniqueIdentifier>{da81ef4e-c78c-4ba4-a374-7e1777c88b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Object\Actor\Entity\Mob">
+      <UniqueIdentifier>{2f94e052-5d11-4d3e-99fc-cb47b21c0404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Pathfinding">
+      <UniqueIdentifier>{9d21ab02-bfad-40ee-be24-c33ba1602c02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -208,6 +217,15 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Fichiers sources\Object\Actor\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AlstarAlgo.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -351,6 +369,15 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers sources\Object\Actor\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AlstarAlgo.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
