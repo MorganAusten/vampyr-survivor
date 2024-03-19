@@ -12,6 +12,8 @@
 using namespace std;
 using namespace sf;
 
+#define MAX_VALUE 3.40282346638e38f;
+
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 #define TILE_SIZE Vector2i(50, 50)

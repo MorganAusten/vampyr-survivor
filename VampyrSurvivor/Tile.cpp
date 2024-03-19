@@ -12,3 +12,10 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos) : Actor(STRING_ID("Tile"
 	shape->setOutlineThickness(-1.f);
 	shape->setOrigin(Vector2f(0.f, 0.f));
 }
+
+void Tile::ResetTileCost()
+{
+	pathfindingParam.h = MAX_VALUE;
+	pathfindingParam.g = MAX_VALUE;
+	pathfindingParam.parent = nullptr;
+}
