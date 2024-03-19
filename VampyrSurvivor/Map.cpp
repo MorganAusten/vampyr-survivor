@@ -43,6 +43,7 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 				const float _positionX = (float)_startPos.x * (float)TILE_SIZE.x;
 				const float _positionY = (float)_startPos.y * (float)TILE_SIZE.y;
 				_callback(Vector2f(_positionX, _positionY));
+				if(sizeSet)
 				size++;
 			}
 			_startPos.x++;

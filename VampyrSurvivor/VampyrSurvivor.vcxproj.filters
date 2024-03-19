@@ -213,6 +213,18 @@
     <ClCompile Include="Tile.cpp">
       <Filter>Fichiers sources\Map</Filter>
     </ClCompile>
+    <ClCompile Include="AlstarAlgo.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="PathfindingComponent.cpp">
+      <Filter>Fichiers sources\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -355,6 +367,18 @@
     </ClInclude>
     <ClInclude Include="Tile.h">
       <Filter>Fichiers sources\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="AlstarAlgo.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="PathfindingComponent.h">
+      <Filter>Fichiers sources\Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
