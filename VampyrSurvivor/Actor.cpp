@@ -7,7 +7,7 @@ Actor::Actor(const string& _name, const ShapeData& _data, const CollisionType& _
 	: ShapeObject(_data), IManagable(_name)
 {
 	Register();
-	SetOriginAtMiddle(GetDrawable());
+	SetOriginAtMiddle(/*GetDrawable()*/);
 
 	animation = new AnimationComponent(this);
 	components.push_back(animation);

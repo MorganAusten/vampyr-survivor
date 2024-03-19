@@ -41,6 +41,11 @@ public:
 		return text->getGlobalBounds().getSize();
 	}
 
+	void SetText(const string& _text)
+	{
+		text->setString(_text);
+	}
+
 public:
 	TextObject(const TextData& _data);
 	~TextObject();

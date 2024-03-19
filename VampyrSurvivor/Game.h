@@ -49,7 +49,9 @@ struct Brightness
 class Game
 {
 	static RenderWindow window;;
+	Player* player;
 	Map* map;
+	ShapeObject* mouse;
 private:
 	static Brightness* brightness;
 
@@ -74,6 +76,7 @@ public:
 public:
 	void Start();
 	void Init();
+	void InitMouseSprite();
 	void Update();
 	void UpdateWindow();
 #pragma region Draws

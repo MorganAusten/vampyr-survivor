@@ -33,11 +33,11 @@ float Distance(const Vector2f& _first, const Vector2f& _second)
 }
 
 
-void SetOriginAtMiddle(Shape* _shape)
-{
-	const Vector2f& _size = _shape->getGlobalBounds().getSize();
-	_shape->setOrigin(_size / 2.0f);
-}
+//void SetOriginAtMiddle(Shape* _shape)
+//{
+//	const Vector2f& _size = _shape->getGlobalBounds().getSize();
+//	_shape->setOrigin(_size / 2.0f);
+//}
 
 string GetLevelFromIndex(const int _index)
 {

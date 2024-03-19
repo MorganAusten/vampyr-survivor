@@ -17,6 +17,11 @@ public:
 		return textObject->GetDrawable();
 	}
 
+	void SetText(const string& _text)
+	{
+		textObject->SetText(_text);
+	}
+
 public:
 	TextWidget(const TextData& _data, const WidgetType& _type = WT_UI);
 };

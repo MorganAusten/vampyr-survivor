@@ -36,6 +36,13 @@ public:
 		const Vector2i& _position = Vector2i(shape->getLocalBounds().getPosition());
 		shape->setTextureRect(IntRect(_position, Vector2i(_size)));
 	}
+
+	void SetOriginAtMiddle()
+	{
+		const Vector2f& _size = shape->getGlobalBounds().getSize();
+		shape->setOrigin(_size / 2.0f);
+	}
+
 	virtual Shape* GetDrawable() const override
 	{
 		return shape;
