@@ -1,6 +1,11 @@
 #include "ShapeObject.h"
 #include "TextureManager.h"
 
+
+ShapeObject::ShapeObject()
+{
+}
+
 ShapeObject::ShapeObject(const ShapeData& _data)
 {
 	shape = new RectangleShape(_data.size);

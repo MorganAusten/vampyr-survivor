@@ -13,6 +13,17 @@ protected:
 	ID id;
 
 public:
+	IManagable()
+	{
+
+	}
+
+	IManagable(const ID& _id)
+	{
+		id = _id;
+		toRemove = false;
+	}
+public:
 	void SetID(const ID& _id)
 	{
 		id = _id;
@@ -30,13 +41,8 @@ public:
 		return toRemove;
 	}
 
-public:
-	IManagable(const ID& _id)
-	{
-		id = _id;
-		toRemove = false;
-	}
 
 protected:
 	virtual void Register() {};
 };
+

@@ -7,6 +7,11 @@ ActorManager::ActorManager()
 	stop = false;
 }
 
+ActorManager::~ActorManager()
+{
+	delete player;
+}
+
 
 void ActorManager::Init()
 {

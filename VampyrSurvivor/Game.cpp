@@ -1,6 +1,6 @@
 #include "Game.h"
+#include "Player.h"
 
-Player* Game::player;
 RenderWindow Game::window;
 Brightness* Game::brightness;
 
@@ -14,6 +14,8 @@ Game::~Game()
 
 void Game::Start()
 {
+	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Click Dungeon");
+	new Player();
 }
 
 void Game::Init()
@@ -22,6 +24,13 @@ void Game::Init()
 
 void Game::Update()
 {
+	while (window.isOpen())
+	{
+		window.clear();
+		//window.draw();
+		window.display();
+	}
+		
 }
 
 void Game::UpdateWindow()
@@ -50,6 +59,9 @@ void Game::Stop()
 
 void Game::Launch()
 {
+	Start();
+	Update();
+	Stop();
 }
 
 void Game::Close()

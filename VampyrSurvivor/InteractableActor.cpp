@@ -33,7 +33,6 @@ void InteractableActor::Verify()
 {
 	if (!interactionBG || !interactionText) return;
 
-	Player* _player = Game::GetPlayer();
 	FloatRect _rectPNJ = shape->getGlobalBounds();
 
 	if (/*_rectPNJ.intersects(_player->GetBounds())*/true)
