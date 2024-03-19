@@ -1,6 +1,5 @@
 #include "Game.h"
 
-Player* Game::player;
 RenderWindow Game::window;
 Brightness* Game::brightness;
 
@@ -14,6 +13,7 @@ Game::~Game()
 
 void Game::Start()
 {
+	new Player();
 }
 
 void Game::Init()

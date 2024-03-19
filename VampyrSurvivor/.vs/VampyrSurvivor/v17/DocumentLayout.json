@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\IManagable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:IManagable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ShapeObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:ShapeObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ActorManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:ActorManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Macro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Macro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +66,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.h",
+              "RelativeDocumentMoniker": "Game.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.h",
+              "RelativeToolTip": "Game.h",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:36:05.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IManagable.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\IManagable.h",
+              "RelativeDocumentMoniker": "IManagable.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\IManagable.h",
+              "RelativeToolTip": "IManagable.h",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACAAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:34:55.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShapeObject.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ShapeObject.h",
+              "RelativeDocumentMoniker": "ShapeObject.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ShapeObject.h",
+              "RelativeToolTip": "ShapeObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:34:24.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Actor.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Actor.h",
+              "RelativeDocumentMoniker": "Actor.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Actor.h",
+              "RelativeToolTip": "Actor.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:34:00.066Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -50,7 +134,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "ActorManager.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ActorManager.h",
+              "RelativeDocumentMoniker": "ActorManager.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\ActorManager.h",
+              "RelativeToolTip": "ActorManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:32:27.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.cpp",
+              "RelativeDocumentMoniker": "Player.cpp",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.cpp",
+              "RelativeToolTip": "Player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-19T10:30:52.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.h",
+              "RelativeDocumentMoniker": "Player.h",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.h",
+              "RelativeToolTip": "Player.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-19T10:30:51.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.cpp",
+              "RelativeDocumentMoniker": "Game.cpp",
+              "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Game.cpp",
+              "RelativeToolTip": "Game.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-19T10:28:33.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "InteractableActor.cpp",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\InteractableActor.cpp",
               "RelativeDocumentMoniker": "InteractableActor.cpp",
@@ -58,12 +194,11 @@
               "RelativeToolTip": "InteractableActor.cpp",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T10:08:44.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T10:08:44.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "Map.cpp",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Map.cpp",
               "RelativeDocumentMoniker": "Map.cpp",
@@ -71,25 +206,24 @@
               "RelativeToolTip": "Map.cpp",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T09:40:19.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:40:19.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Tile.cpp",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Tile.cpp",
               "RelativeDocumentMoniker": "Tile.cpp",
               "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Tile.cpp",
               "RelativeToolTip": "Tile.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T09:37:37.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Macro.h",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Macro.h",
               "RelativeDocumentMoniker": "Macro.h",
@@ -97,12 +231,11 @@
               "RelativeToolTip": "Macro.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAjwA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T09:36:10.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:36:10.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Map.h",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Map.h",
               "RelativeDocumentMoniker": "Map.h",
@@ -110,12 +243,11 @@
               "RelativeToolTip": "Map.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T09:34:14.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:34:14.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Tile.h",
               "DocumentMoniker": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Tile.h",
               "RelativeDocumentMoniker": "Tile.h",
@@ -123,8 +255,7 @@
               "RelativeToolTip": "Tile.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T09:33:54.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:33:54.117Z"
             }
           ]
         }

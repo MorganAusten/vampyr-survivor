@@ -32,6 +32,7 @@ public:
 		return shape->getGlobalBounds();
 	}
 public:
+	Actor() = default;
 	Actor(const string& _name, const ShapeData& _data, const CollisionType& _collisionType = CT_NONE);
 	~Actor();
 

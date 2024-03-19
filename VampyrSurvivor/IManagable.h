@@ -31,6 +31,7 @@ public:
 	}
 
 public:
+	IManagable() = default;
 	IManagable(const ID& _id)
 	{
 		id = _id;

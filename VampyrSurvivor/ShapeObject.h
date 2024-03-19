@@ -56,6 +56,7 @@ public:
 	}
 
 public:
+	ShapeObject() = default;
 	ShapeObject(const ShapeData& _data);
 	~ShapeObject();
 };
