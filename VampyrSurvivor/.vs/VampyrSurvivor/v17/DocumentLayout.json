@@ -35,8 +35,7 @@
               "ViewState": "AQIAABYAAAAAAAAAAAAjwBUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T10:30:52.341Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Game.cpp",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T14:56:25.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T14:56:25.857Z"
             },
             {
               "$type": "Document",
@@ -71,7 +69,7 @@
               "RelativeDocumentMoniker": "Player.h",
               "ToolTip": "C:\\Users\\Gregory ZANATTA\\OneDrive\\Bureau\\Cours P1\\SFML\\vampyr-survivor\\VampyrSurvivor\\Player.h",
               "RelativeToolTip": "Player.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-19T10:30:51.54Z",
               "EditorCaption": ""
