@@ -222,8 +222,8 @@
     <ClCompile Include="Mob.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Barrier.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="PathfindingComponent.cpp">
+      <Filter>Fichiers sources\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -377,8 +377,8 @@
     <ClInclude Include="Mob.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Barrier.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="PathfindingComponent.h">
+      <Filter>Fichiers sources\Component</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
