@@ -66,6 +66,11 @@ public:
         return foreground;
     }
 
+    inline void SetType(const WidgetType& _type)
+    {
+		SetWidgetType(_type);
+    }
+
 public:
     ProgressBar(const ShapeData& _data, const string& _path,
         const ProgressType& _type, const float _maxValue = 100.0f);

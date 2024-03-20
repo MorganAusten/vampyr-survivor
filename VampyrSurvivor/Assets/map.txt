@@ -1,11 +1,11 @@
 ##P##P##P##
 ##P##P##P##
+PPPPBPBPPPP
+##P##P##P##
+##B##P##B##
 PPPPPPPPPPP
+##B##P##B## BBBB
 ##P##P##P##
-##P##P##P##
-PPPPPPPPPPP
-##P##P##P##
-##P##P##P##
-PPPPPPPPPPP
+PPPPBPBPPPP
 ##P##P##P##
 ##P##P##P##

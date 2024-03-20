@@ -1,17 +1,22 @@
 #pragma once
 #include "Actor.h"
 #include "ProgressLabel.h"
+#include "Canvas.h"
 
 class ProgressBar;
 class Entity : public Actor
 {
 protected:
-	float maxHp = 0;
-	float hp = 0;
+	float maxHp;
+	float hp;
+	float damage;
 	ProgressBar* lifeBar;
+	Canvas* progressBarCanvas;
 public:
-	Entity() = default;
+	Entity();
+	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const float _maxHp, const float _damage);
 	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType);
+
 public:
 	inline ProgressBar* GetLifeBar()const { return lifeBar; }
 	inline float GetHP()const { return hp; }

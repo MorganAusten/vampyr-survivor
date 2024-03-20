@@ -231,6 +231,12 @@
     <ClCompile Include="Mob.cpp">
       <Filter>Fichiers sources\Object\Actor</Filter>
     </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Building.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -391,6 +397,12 @@
     </ClInclude>
     <ClInclude Include="Mob.h">
       <Filter>Fichiers sources\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Building.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

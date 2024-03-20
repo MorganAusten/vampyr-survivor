@@ -7,8 +7,13 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
     const ProgressType& _type, const float _maxValue)
     : ShapeWidget(_data)
 {
+
     type = _type;
     foreground = new ShapeWidget(ShapeData(_data.position, _data.size, _path));
+
+    shapeObject->GetShape()->setFillColor(Color::Red);
+
+	foreground->GetDrawable()->setFillColor(Color::Green);
 
     size = _data.size;
     UpdateOriginAndPosition(size);

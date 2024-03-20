@@ -50,6 +50,8 @@ public:
 	//TODO Remove(Test)
 	PathfindingComponent* pathComp;
 
+	PlayerStat* GetStat() const { return stat; }
+
 
 public:
 	Player();

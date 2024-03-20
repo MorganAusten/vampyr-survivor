@@ -34,6 +34,11 @@ public:
 	{
 		return type;
 	}
+
+	void SetWidgetType(WidgetType _type)
+	{
+		type = _type;
+	}
 	virtual Object* GetObject() const = 0;
 	virtual Drawable* GetDrawable() const = 0;
 

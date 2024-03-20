@@ -1,11 +1,11 @@
 #pragma once
-#include "Actor.h"
+#include "Building.h"
 
-
-class Barrier : public Actor
+class Barrier : public Building
 {
-	int hp;
 public:
+	/*const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const BuildingData& _bData,
+		const int _maxHp, const float _damage = 0*/
 	Barrier(const Vector2f& _pos);
 };
 
