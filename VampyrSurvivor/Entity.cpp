@@ -1,7 +1,7 @@
 #include "Entity.h"
 #include "ProgressBar.h"
 
-Entity::Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType) : Actor(_name,_data,_collisionType)
+Entity::Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType) : Actor(_name, _data, _collisionType)
 {
 }
 

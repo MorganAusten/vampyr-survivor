@@ -1,26 +1,38 @@
 #include "MovementComponent.h"
-#include "AnimationComponent.h"
-#include "Actor.h"
+#include"TimerManager.h"
 
-MovementComponent::MovementComponent(Actor* _owner) : Component(_owner)
+MovementComponent::MovementComponent(Actor* _owner, const int _speed, const bool _shouldResetDirection) :Component(_owner)
 {
-	canMove = true;
-	speed = 0.5f;
-	collision = _owner->GetComponent<CollisionComponent>();
+    canMove = true;
+    direction = new Vector2i(0, 0);
+    collision = nullptr;
+    speed = _speed;
 }
 
-void MovementComponent::SetCanMove(const bool _status)
+void MovementComponent::Move()
 {
-	canMove = _status;
+    if (!canMove) return;
+    Shape* _shape = owner->GetShape();
+    const Vector2f& _tileSize = (Vector2f)TILE_SIZE;
+    const float _directionX = (direction->x * speed * _tileSize.x);
+    const float _directionY = (direction->y * speed * _tileSize.y);
+    const Vector2f& _position = owner->GetShapePosition() + Vector2f(_directionX, _directionY);
+    _shape->setPosition(_position);
+    if (direction)
+    {
+        delete direction;
+    }
+    direction = new Vector2i(0, 0);
+}
 
-	if (!animation)
-	{
-		animation = owner->GetComponent<AnimationComponent>();
-		if (!animation) return;
-	}
 
-	if (!canMove)
-	{
-		animation->RunAnimation("Idle", lastDirection.x);
-	}
+void MovementComponent::TryToMove()
+{
+    if (!canMove) return;
+    Move();
+}
+
+void MovementComponent::Update()
+{
+    TryToMove();
 }

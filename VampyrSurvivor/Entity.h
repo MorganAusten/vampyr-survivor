@@ -6,7 +6,7 @@ class ProgressBar;
 class Entity : public Actor
 {
 protected:
-	float maxHp = 0;
+	float maxHp= 0;
 	float hp = 0;
 	ProgressBar* lifeBar;
 public:

@@ -3,6 +3,7 @@
 #include "Barrier.h"
 #include "PathfindingComponent.h"
 #include "Player.h"
+#include "Mob.h"
 
 Map::Map()
 {
@@ -55,7 +56,6 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 		_startPos.y++;
 	}
 	SetSuccessor();
-
 }
 
 void Map::SetSuccessor()

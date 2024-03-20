@@ -5,6 +5,7 @@
 #include "TextureManager.h"
 #include "MenuManager.h"
 #include "PathfindingComponent.h"
+#include "Mob.h"
 #include "HUD.h"
 
 RenderWindow Game::window;
@@ -20,13 +21,11 @@ void Game::Start()
 {
 	player = new Player("Player",ShapeData());
 	Game::map = new Map();
-	//TODO remove(test)
-	player->pathComp = new PathfindingComponent(player);
-	player->pathComp->ComputeNewPath();
-	//
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
+	Mob* _mob = new Mob("mob", ShapeData(Vector2f(250,-250), Vector2f(10, 10)));
+	_mob->GetComponent<PathfindingComponent>()->ComputeNewPath();
 	InitMouseSprite();
 
 	new ActionMap("Game",

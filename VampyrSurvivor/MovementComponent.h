@@ -1,42 +1,53 @@
 #pragma once
-#include "Component.h"
-#include "CollisionComponent.h"
-#include "AnimationComponent.h"
+#include<SFML/Graphics.hpp>
+#include"Component.h"
+#include"ActorManager.h"
+#include"Macro.h"
+#include"CollisionComponent.h"
+#include"Tile.h"
 
-#include <SFML/Graphics.hpp>
-#include <functional>
-#include <iostream>
-
-using namespace std;
 using namespace sf;
 
-class MovementComponent : public Component
+class MovementComponent :public Component
 {
-protected:
-	bool canMove;
-	float speed;
-	float gravity;
-	Vector2f lastDirection;
+    int speed;
+    bool canMove;
+    Vector2i* direction;
+    CollisionComponent* collision;
+    
+public:
 
-	AnimationComponent* animation;
-	CollisionComponent* collision;
+    inline bool GetCanMove()
+    {
+        return canMove;
+    }
+    inline int GetSpeed() const
+    {
+        return speed;
+    }
+    inline void SetCanMove(const bool _status)
+    {
+        canMove = _status;
+    }
+    inline void SetDirection(const Vector2i& _direction)
+    {
+        if (direction)
+        {
+            delete direction;
+        }
+        direction = new Vector2i(_direction);
+    }
+    inline Vector2i* GetDirection()
+    {
+        return direction;
+    }
+
 
 public:
-	void SetSpeed(const float _speed)
-	{
-		speed = _speed;
-	}
-	void SetCanMove(const bool _status);
-	bool GetCanMove() const
-	{
-		return canMove;
-	}
-	Vector2f GetLastDirection() const
-	{
-		return lastDirection;
-	}
+    MovementComponent(Actor* _owner, const int _speed = 1, const bool _shouldResetDirection = true);
 
 public:
-	MovementComponent(Actor* _owner);
+    void Move();
+    void TryToMove();
+    void Update();
 };
-
