@@ -10,6 +10,7 @@ using namespace sf;
 
 class Canvas : public IManagable<string>
 {
+protected:
 	bool isVisible;
 	FloatRect rect;
 	vector<Widget*> uiWidgets;
