@@ -60,36 +60,35 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 
 void Map::SetSuccessor()
 {
-	//cout << size << endl;
-	//for (int i = 0; i < size * size; i++)
-	//{
-	//	bool _canRight = i % size != size - 1,
-	//		_canTop = i > size-1 ,
-	//		_canDown = i < (size * size) - size,
-	//		_canLeft = i % size != 0;
-	//	if (_canRight)
-	//		grid[i]->AddSuccessor(i + 1);
-	//	if (_canLeft)
-	//		grid[i]->AddSuccessor(i - 1);
-	//	if (_canTop)
-	//	{
-	//		grid[i]->AddSuccessor(i - size);
-	//		//if (_canRight)
-	//		//	grid[i]->AddSuccessor((i + 1 - size));
-	//		//if (_canLeft)
-	//		//	grid[i]->AddSuccessor((i - 1 - size));
-	//	}
-	//	if (_canDown)
-	//	{
-	//		grid[i]->AddSuccessor(i + size);
-	//		//if (_canRight)
-	//		//	grid[i]->AddSuccessor((i + 1 + size));
-	//		//if (_canLeft)
-	//		//	grid[i]->AddSuccessor((i - 1 + size));
-	//	}
-	//	/*cout << "modulo : " << i % size << endl <<  grid[i]->ToString(grid[i]) << " " << i + 1 << " successors : " << grid[i]->pathfindingParam.successors.size() <<
-	//		" Pos : (" << grid[i]->GetShapePosition().x  <<","<< grid[i]->GetShapePosition().y << ")" << " Navigable : " << grid[i]->pathfindingParam.navigable << endl;*/
-	//}
+	for (int i = 0; i < size * size; i++)
+	{
+		bool _canRight = i % size != size - 1,
+			_canTop = i > size-1 ,
+			_canDown = i < (size * size) - size,
+			_canLeft = i % size != 0;
+		if (_canRight)
+			grid[i]->AddSuccessor(i + 1);
+		if (_canLeft)
+			grid[i]->AddSuccessor(i - 1);
+		if (_canTop)
+		{
+			grid[i]->AddSuccessor(i - size);
+			//if (_canRight)
+			//	grid[i]->AddSuccessor((i + 1 - size));
+			//if (_canLeft)
+			//	grid[i]->AddSuccessor((i - 1 - size));
+		}
+		if (_canDown)
+		{
+			grid[i]->AddSuccessor(i + size);
+			//if (_canRight)
+			//	grid[i]->AddSuccessor((i + 1 + size));
+			//if (_canLeft)
+			//	grid[i]->AddSuccessor((i - 1 + size));
+		}
+		/*cout << "modulo : " << i % size << endl <<  grid[i]->ToString(grid[i]) << " " << i + 1 << " successors : " << grid[i]->pathfindingParam.successors.size() <<
+			" Pos : (" << grid[i]->GetShapePosition().x  <<","<< grid[i]->GetShapePosition().y << ")" << " Navigable : " << grid[i]->pathfindingParam.navigable << endl;*/
+	}
 }
 
 void Map::ResetGridCost()

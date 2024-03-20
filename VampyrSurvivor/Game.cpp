@@ -24,7 +24,7 @@ void Game::Start()
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	Mob* _mob = new Mob("mob", ShapeData(Vector2f(250,-250), Vector2f(10, 10)));
+	Mob* _mob = new Mob("mob", ShapeData(Vector2f(250,-250), Vector2f(10, 10)),CollisionType::CT_NONE,100,20);
 	_mob->GetComponent<PathfindingComponent>()->ComputeNewPath();
 	InitMouseSprite();
 

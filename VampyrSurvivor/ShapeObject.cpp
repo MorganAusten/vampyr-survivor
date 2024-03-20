@@ -6,7 +6,7 @@ ShapeObject::ShapeObject(const ShapeData& _data)
 {
 	const Vector2f& _size = _data.size;
 	shape = new RectangleShape(_size);
-	std::cout << shape->getGlobalBounds().getSize().x << " " << shape->getGlobalBounds().getSize().y << endl;
+	//std::cout << shape->getGlobalBounds().getSize().x << " " << shape->getGlobalBounds().getSize().y << endl;
 	shape->setPosition(_data.position);
 
 	TextureManager& _textureManager = TextureManager::GetInstance();

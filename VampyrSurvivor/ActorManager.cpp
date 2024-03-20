@@ -20,6 +20,7 @@ void ActorManager::Update()
 {
 	const float _deltaTime = TimerManager::GetInstance().GetDeltaTime();
 	int _size  = GetAllValues().size();
+	cout << _size << endl;
 	int _var = 0;
 	for (Actor* _actor : GetAllValues())
 	{

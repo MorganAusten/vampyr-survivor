@@ -7,7 +7,7 @@ Shop::Shop(const string& _name) : Canvas(_name)
 
 void Shop::AddBuilding(Building* _building)
 {
-	AddWidget(_building->GetWidget());
+	//AddWidget(_building->GetWidget());
 	buildings.push_back(_building);
 }
 
