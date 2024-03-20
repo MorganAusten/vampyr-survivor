@@ -15,6 +15,7 @@ enum ProgressType
 
 class ProgressBar : public ShapeWidget
 {
+    Canvas* canva;
     ProgressType type;
     ShapeWidget* foreground;
     float currentValue;
@@ -22,6 +23,7 @@ class ProgressBar : public ShapeWidget
     Vector2f size;
 
 public:
+    inline Canvas* GetCanva()const { return canva; }
     inline virtual void SetShapePosition(const Vector2f& _position) override
     {
         ShapeWidget::SetShapePosition(_position);
@@ -70,13 +72,13 @@ public:
     {
 		SetWidgetType(_type);
     }
-
+    void UpdateOriginAndPosition(const Vector2f& _size);
+    void Update();
 public:
     ProgressBar(const ShapeData& _data, const string& _path,
         const ProgressType& _type, const float _maxValue = 100.0f);
+    ~ProgressBar();
 
 private:
-    void Update();
-    void UpdateOriginAndPosition(const Vector2f& _size);
     IntRect MakeRect(const float _percent);
 };

@@ -1,10 +1,12 @@
 #include "MovementComponent.h"
 #include"TimerManager.h"
 #include "Kismet.h"
+#include "Mob.h"
 #include "PathfindingComponent.h"
 
-MovementComponent::MovementComponent(Actor* _owner, const int _speed, const bool _shouldResetDirection) :Component(_owner)
+MovementComponent::MovementComponent(Actor* _owner, const int _speed) :Component(_owner)
 {
+	owner = _owner;
 	positionIndex = 0;
 	lerpTimer = 0;
 	canMove = true;
@@ -15,28 +17,40 @@ MovementComponent::MovementComponent(Actor* _owner, const int _speed, const bool
 
 void MovementComponent::Move()
 {
-	if (!canMove) return;
-	cout << "[MovementComponent::Move] => LerpTimer ="  << lerpTimer   << endl;
-	Shape* _shape = owner->GetShape();
-	const Vector2f& _position = VLinearInterp(destination, owner->GetShapePosition(),lerpTimer, 0.0001);
-	cout << "[MovementComponent::Move] => owner->GetShapePosition = (" << owner->GetShapePosition().x << "," << owner->GetShapePosition().y << ")" << endl;
-	cout << "[MovementComponent::Move] => destination = (" << destination.x << "," << destination.y << ")" << endl;
-	cout << "[MovementComponent::Move] => _position = (" << _position.x << "," << _position.y << ")" << endl;
-	_shape->setPosition(_position);
+#pragma region cout
+	//cout << "[MovementComponent::Move] => LerpTimer ="  << lerpTimer   << endl;
+	//cout << "[MovementComponent::Move] => owner->GetShapePosition = (" << owner->GetShapePosition().x << "," << owner->GetShapePosition().y << ")" << endl;
+	//cout << "[MovementComponent::Move] => destination = (" << destination.x << "," << destination.y << ")" << endl;
+	//cout << "[MovementComponent::Move] => _position = (" << _position.x << "," << _position.y << ")" << endl;
 	//cout << "[MovementComponent::Move] => Direction = (" << _position.x << "," << _position.y << ")" << endl;
+#pragma endregion cout
+
+	if (!canMove) return;
+	Shape* _shape = owner->GetShape();
+	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed *0.001);
+	_shape->setPosition(_position);
 	if (lerpTimer >= 1)
 	{
+		if (positionIndex == owner->GetComponent<PathfindingComponent>()->GetPath().size() - 1)
+		{
+			Mob* _owner = (Mob*)owner;
+			_owner->PassedThePortal();
+			Mob* _mob = new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(600, 0), Random(600, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100, Random(10,2), 20);
+			cout << "position new mob " << _mob->GetShapePosition().x << ", " << _mob->GetShapePosition().y << endl;
+			return;
+		}
 		lerpTimer = 0;
-		cout << "[MovementComponent::Move] => position index = " << positionIndex << endl;
 		positionIndex++;
-		//ActualizeNextTile(owner->GetComponent<PathfindingComponent>()->GetPath()[positionIndex]);
+		ActualizeNextTile(owner->GetComponent<PathfindingComponent>()->GetPath()[positionIndex]);
 	}
+	//cout << lerpTimer << endl;
 }
 
 
 void MovementComponent::ActualizeNextTile(Tile* _nextTile)
 {
-	destination = _nextTile->GetShapePosition();
+	SetOrigin();
+	SetDestination(_nextTile->GetShapePosition());
 	UpdateDirection();
 }
 

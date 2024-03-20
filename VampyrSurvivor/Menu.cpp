@@ -1,5 +1,6 @@
 #include "Menu.h"
 #include "MenuManager.h"
+#include "Macro.h"
 
 #define SOUND_SELECT "Ui/ui_change_selection"
 Menu::Menu(const string& _name, Menu* _owner) : IManagable(_name)
@@ -7,7 +8,7 @@ Menu::Menu(const string& _name, Menu* _owner) : IManagable(_name)
 	Register();
 
 	isInit = false;
-	canvas = new Canvas(_name);
+	canvas = new Canvas(STRING_ID(_name), FloatRect(1000,1000,1000,1000));
 	pointerLeft = nullptr;
 	pointerRight = nullptr;
 	backButton = nullptr;

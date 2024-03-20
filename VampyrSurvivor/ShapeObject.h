@@ -39,8 +39,8 @@ public:
 
 	void SetOriginAtMiddle()
 	{
-		const Vector2f& _size = shape->getGlobalBounds().getSize();
-		shape->setOrigin(_size / 2.0f);
+		const Vector2f& _size = Vector2f(shape->getGlobalBounds().getSize().x /2, shape->getGlobalBounds().getSize().y / 2);
+		shape->setOrigin(_size);
 	}
 
 	virtual Shape* GetDrawable() const override

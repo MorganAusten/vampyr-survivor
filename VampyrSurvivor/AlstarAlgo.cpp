@@ -5,7 +5,7 @@
 
 vector<Tile*> AlstarAlgo::ComputePath(Tile* _start, Tile* _end)
 {
-    _start->ResetTileCost();
+    Game::GetMap()->ResetGridCost();
     vector<Tile*> _openList = vector<Tile*>(), _closedList = vector<Tile*>();
     _start->pathfindingParam.g = 0;
     _start->pathfindingParam.h = 0;

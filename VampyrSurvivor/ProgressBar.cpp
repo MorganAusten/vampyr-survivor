@@ -2,16 +2,20 @@
 #include "Widget.h"
 #include "TextureManager.h"
 #include "HUD.h"
+#include "Macro.h"
 
 ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
     const ProgressType& _type, const float _maxValue)
     : ShapeWidget(_data)
 {
-
+    canva = new Canvas(STRING_ID("ProgressBar"), FloatRect(Vector2f(10000000,0),Vector2f(1, 1)));
     type = _type;
+
     foreground = new ShapeWidget(ShapeData(_data.position, _data.size, _path));
 
     shapeObject->GetShape()->setFillColor(Color::Red);
+    shapeObject->GetShape()->setOutlineColor(Color::White);
+    shapeObject->GetShape()->setOutlineThickness(3);
 
 	foreground->GetDrawable()->setFillColor(Color::Green);
 
@@ -20,6 +24,11 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
 
     maxValue = _maxValue;
     currentValue = maxValue;
+}
+
+ProgressBar::~ProgressBar()
+{
+    delete  foreground;
 }
 
 
@@ -108,3 +117,4 @@ void ProgressBar::Update()
     if (_directions[type].y) _scale.y = _fillPercent;
     _fgShape->setScale(_scale);
 }
+

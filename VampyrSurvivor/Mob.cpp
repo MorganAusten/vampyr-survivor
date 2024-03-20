@@ -1,41 +1,41 @@
 #include "Mob.h"
 #include "MovementComponent.h"
 #include "pathFindingComponent.h"
+#include "ProgressBar.h"
 
-//Useless
-Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType) :
-	Entity(_name, _data, _collisionType)
-{
-	components.push_back(new MovementComponent(this));
-	components.push_back(new PathfindingComponent(this));
-	ComputeNewPath();
-}
 
-Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, const float _damages) :
+Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, float _speed, const float _damages) :
 	Entity(_name, _data, _collisionType, _maxHp, _damages)
 {
-	components.push_back(new MovementComponent(this));
+	components.push_back(new MovementComponent(this,_speed));
 	components.push_back(new PathfindingComponent(this));
 	ComputeNewPath();
 }
 
 void Mob::Update(const float _deltaTime)
 {
-	MovementComponent* _mouvementComp = GetComponent<MovementComponent>();
 	vector<Tile*> _path = GetComponent<PathfindingComponent>()->GetPath();
-	int _positionIndex = _mouvementComp->GetPositionIndex();
+	int _positionIndex = GetComponent<MovementComponent>()->GetPositionIndex();
 	if (_positionIndex >= _path.size() - 1)
 		IsToRemove();
-	_mouvementComp->Update();
+	GetComponent<MovementComponent>()->Update();
+	lifeBar->SetShapePosition(GetShapePosition() +  Vector2f(0,-20));
 }
 
 void Mob::ComputeNewPath()
 {
-	cout << "[Mob::ComputeNewPath]" << endl;
+	cout << "coucou" << endl;
 	GetComponent<PathfindingComponent>()->ComputeNewPath();
 	vector<Tile*> _path = GetComponent<PathfindingComponent>()->GetPath();
+	GetComponent<MovementComponent>()->SetOrigin();
 	GetComponent<MovementComponent>()->SetDestination(_path[0]->GetShapePosition());
-	cout << " CurrentMobPosition : (" << GetShapePosition().x << "," << GetShapePosition().y << ") " << endl;
+	/*cout << " CurrentMobPosition : (" << GetShapePosition().x << "," << GetShapePosition().y << ") " << endl;
 	cout << " Destination : (" << GetComponent<MovementComponent>()->GetDestination().x << "," << GetComponent<MovementComponent>()->GetDestination().y << ") " << endl;
-	cout << " TilePosition : (" << _path[0]->GetShapePosition().x << "," << _path[0]->GetShapePosition().y << ") " << endl;
+	cout << " TilePosition : (" << _path[0]->GetShapePosition().x << "," << _path[0]->GetShapePosition().y << ") " << endl;*/
+}
+
+void Mob::PassedThePortal()
+{
+	SetToRemove(true);
+	lifeBar->SetVisible(false);
 }

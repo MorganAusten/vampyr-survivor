@@ -1,6 +1,7 @@
 #include "PathfindingComponent.h"
 #include "TimerManager.h"
 #include "Game.h"
+#include "Mob.h"
 #include "Macro.h"
 
 

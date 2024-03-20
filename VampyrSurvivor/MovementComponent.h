@@ -15,6 +15,7 @@ class MovementComponent :public Component
     float lerpTimer;
     bool canMove;
     Vector2i direction;
+    Vector2f origin;
     Vector2f destination;
     CollisionComponent* collision;
 public:
@@ -26,14 +27,16 @@ public:
     inline void SetCanMove(const bool _status){canMove = _status; }
     inline void SetDestination(const Vector2f& _destination)
     { 
-        destination = Vector2f(_destination.x + TILE_SIZE.x/2, _destination.x + TILE_SIZE.y / 2);
+        destination = Vector2f(_destination.x + TILE_SIZE.x/2, _destination.y + TILE_SIZE.y / 2);
         UpdateDirection();
     }
+    inline void SetOrigin() { origin = owner->GetShapePosition(); }
     inline Vector2i GetDirection()const { return direction;}
     inline Vector2f GetDestination()const { return destination;}
+    inline Vector2f GetOrigin()const { return origin;}
     void Update();
 public:
-    MovementComponent(Actor* _owner, const int _speed = 1 , const bool _shouldResetDirection = true);
+    MovementComponent(Actor* _owner, const int _speed = 100);
 private:
     void Move();
     inline void UpdateDirection() {

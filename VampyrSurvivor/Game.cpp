@@ -24,10 +24,13 @@ void Game::Start()
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	Mob* _mob = new Mob("mob", ShapeData(Vector2f(0 + TILE_SIZE.x / 2, 0 + TILE_SIZE.y / 2), Vector2f(10, 10)), CollisionType::CT_NONE, 100, 20);
-	_mob->GetComponent<PathfindingComponent>()->ComputeNewPath();
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(0,0), Vector2f(10, 10)), CollisionType::CT_NONE, 100,100, 20);
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,300, 20);
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(15, 15)), CollisionType::CT_NONE, 100,150, 20);
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,50, 20);
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,200, 20);
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,20, 20);
 	InitMouseSprite();
-
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),
@@ -46,31 +49,35 @@ void Game::InitMouseSprite()
 
 void Game::Update()
 {
+	UpdateWindow();
+}
+
+void Game::UpdateWindow()
+{
 	while (window.isOpen())
 	{
 		ActorManager::GetInstance().Update();
 		InputManager::GetInstance().Update(window);
 
 		TimerManager::GetInstance().Update();
-
-		mouse->SetShapePosition(InputManager::GetInstance().GetWorldPosition() - Vector2f(mouse->GetShapeSize().x / 2.5f, mouse->GetShapeSize().y / 3.f));
+		Vector2f _a = InputManager::GetInstance().GetWorldPosition();
+		Vector2f _b = Vector2f(mouse->GetShapeSize().x / 2.5f, mouse->GetShapeSize().y / 3.f);
+		Vector2f _result = Vector2f((_a.x - _b.x), (_a.y - _b.y));
+		mouse->SetShapePosition(_result);
 		window.clear();
+		//Mode world
 		window.setView(*player->GetView());
 		for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
 		{
 			window.draw(*_actor->GetShape());
 		}
 		DrawWorldUIs();
+		// Mode Canva
 		window.setView(window.getDefaultView());
 		DrawUIs();
 		window.draw(*mouse->GetShape());
 		window.display();
 	}
-}
-
-void Game::UpdateWindow()
-{
-
 }
 
 void Game::DrawWorldUIs()
