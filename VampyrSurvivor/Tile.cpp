@@ -8,6 +8,7 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos, bool _navigable) : Actor
 
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
+
 	shape->setOrigin(Vector2f(0.f, 0.f));
 	shape->setOutlineThickness(-2.f);
 	shape->setOutlineColor(Color::White);
