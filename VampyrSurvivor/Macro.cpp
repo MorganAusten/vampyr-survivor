@@ -17,9 +17,9 @@ float Length(Vector2f& _vector)
 //	return -1 + 2 * ((float)rand()) / RAND_MAX;
 //}
 
-void Normalize(Vector2f& _vector)
+Vector2f Normalize(Vector2f& _vector)
 {
-	_vector /= Length(_vector);
+	return _vector /= Length(_vector);
 }
 
 float Distance(const float _first, const float _second)

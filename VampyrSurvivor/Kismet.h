@@ -15,6 +15,7 @@ struct HitInfo
 	}
 };
 
+Vector2f VLinearInterp(const Vector2f& _a, const Vector2f& _b, float& _timer, float _t);
 
 bool Raycast(const Vector2f& _origin, const Vector2f& _direction, const float _maxDistance,
 	HitInfo& _hitInfo, const vector<Actor*>& _ignoredActors = vector<Actor*>(),

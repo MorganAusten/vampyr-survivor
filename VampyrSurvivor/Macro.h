@@ -28,7 +28,7 @@ using namespace sf;
 int GetUniqueID();
 float Length(Vector2f& _vector);
 
-void Normalize(Vector2f& _vector);
+Vector2f Normalize(Vector2f& _vector);
 float Distance(const float _first, const float _second);
 float Distance(const Vector2f& _first, const Vector2f& _second);
 float Distance(const float _first, const float _second);
@@ -66,9 +66,10 @@ bool Contains(T* _valueToFind, const vector<T*>& _vector)
 template<typename T>
 vector<T*> Reverse(vector<T*> _vector)
 {
+
 	vector<T*> _result;
 	for (int i = _vector.size() - 1, x = 0; i >= 0; i--, x++)
-		_result.push_back(_vector[x]); 
+		_result.push_back(_vector[i]); 
 	return _result;
 }
 

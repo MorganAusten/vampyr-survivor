@@ -20,5 +20,6 @@ public:
 	Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType = CT_NONE);
 	Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType ,const float _maxHp, const float _damages);
 	virtual void Update(const float _deltaTime) override;
+	void ComputeNewPath();
 };
 

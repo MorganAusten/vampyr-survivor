@@ -19,12 +19,12 @@ Game::~Game()
 
 void Game::Start()
 {
-	player = new Player("Player",ShapeData());
+	player = new Player("Player", ShapeData());
 	Game::map = new Map();
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	Mob* _mob = new Mob("mob", ShapeData(Vector2f(250,-250), Vector2f(10, 10)),CollisionType::CT_NONE,100,20);
+	Mob* _mob = new Mob("mob", ShapeData(Vector2f(0 + TILE_SIZE.x / 2, 0 + TILE_SIZE.y / 2), Vector2f(10, 10)), CollisionType::CT_NONE, 100, 20);
 	_mob->GetComponent<PathfindingComponent>()->ComputeNewPath();
 	InitMouseSprite();
 
@@ -40,7 +40,7 @@ void Game::Init()
 
 void Game::InitMouseSprite()
 {
-	mouse = new ShapeObject(ShapeData({},{50,50},"cursor.png"));
+	mouse = new ShapeObject(ShapeData({}, { 50,50 }, "cursor.png"));
 	//mouse->SetOriginAtMiddle();
 }
 
@@ -50,10 +50,10 @@ void Game::Update()
 	{
 		ActorManager::GetInstance().Update();
 		InputManager::GetInstance().Update(window);
-		
+
 		TimerManager::GetInstance().Update();
 
-		mouse->SetShapePosition(InputManager::GetInstance().GetWorldPosition() - Vector2f(mouse->GetShapeSize().x / 2.5f,mouse->GetShapeSize().y / 3.f));
+		mouse->SetShapePosition(InputManager::GetInstance().GetWorldPosition() - Vector2f(mouse->GetShapeSize().x / 2.5f, mouse->GetShapeSize().y / 3.f));
 		window.clear();
 		window.setView(*player->GetView());
 		for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
