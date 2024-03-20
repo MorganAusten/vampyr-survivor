@@ -7,9 +7,7 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos,bool _navigable) : Actor(
 	type = _type;
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
-	Color _color = type == TT_GRASS ? Color::Red : Color::Green;
 
-	shape->setFillColor(_color);
 	shape->setOutlineColor(Color::Black);
 	shape->setOutlineThickness(-1.f);
 	shape->setOrigin(Vector2f(0.f, 0.f));

@@ -175,6 +175,7 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="PathfindingComponent.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ProgressLabel.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
     <ClCompile Include="ShapeWidget.cpp" />
@@ -228,6 +229,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="PathfindingComponent.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="ProgressLabel.h" />
     <ClInclude Include="ShapeObject.h" />
     <ClInclude Include="ShapeWidget.h" />
