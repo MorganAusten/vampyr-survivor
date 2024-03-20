@@ -2,16 +2,16 @@
 #include "Macro.h"
 #include "Game.h"
 
-Tile::Tile(const TileType& _type, const Vector2f& _pos, bool _navigable) : Actor(STRING_ID("ATile"),ShapeData(_pos, Vector2f(TILE_SIZE),GetPathWithType(_type)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos,bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE)))
 {
 	type = _type;
-
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
 
+	shape->setFillColor(type == TT_GRASS ? sf::Color::Red : sf::Color::Green);
+	shape->setOutlineColor(Color::Black);
+	shape->setOutlineThickness(-1.f);
 	shape->setOrigin(Vector2f(0.f, 0.f));
-	shape->setOutlineThickness(-2.f);
-	shape->setOutlineColor(Color::White);
 }
 
 std::string Tile::ToString(Object* _object)
