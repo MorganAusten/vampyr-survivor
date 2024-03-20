@@ -24,7 +24,6 @@ void Mob::Update(const float _deltaTime)
 
 void Mob::ComputeNewPath()
 {
-	cout << "coucou" << endl;
 	GetComponent<PathfindingComponent>()->ComputeNewPath();
 	vector<Tile*> _path = GetComponent<PathfindingComponent>()->GetPath();
 	GetComponent<MovementComponent>()->SetOrigin();

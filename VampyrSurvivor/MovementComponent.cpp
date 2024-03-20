@@ -36,7 +36,6 @@ void MovementComponent::Move()
 			Mob* _owner = (Mob*)owner;
 			_owner->PassedThePortal();
 			Mob* _mob = new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(600, 0), Random(600, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100, Random(10,2), 20);
-			cout << "position new mob " << _mob->GetShapePosition().x << ", " << _mob->GetShapePosition().y << endl;
 			return;
 		}
 		lerpTimer = 0;

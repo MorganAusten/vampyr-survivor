@@ -56,7 +56,7 @@ void Player::InitInput()
 
 void Player::InitView()
 {
-	view = new View({ 0,0 }, { SCREEN_WIDTH , SCREEN_HEIGHT});
+	view = new View({ 0,0 }, { SCREEN_WIDTH/2 , SCREEN_HEIGHT/2});
 }
 
 void Player::OnClick()
