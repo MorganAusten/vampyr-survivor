@@ -9,7 +9,6 @@ struct PlayerStat
 	int money;
 	Label* moneyText;
 	Canvas* canvas;
-
 public:
 	PlayerStat() 
 	{

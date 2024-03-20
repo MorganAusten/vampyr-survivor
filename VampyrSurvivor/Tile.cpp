@@ -2,10 +2,7 @@
 #include "Macro.h"
 #include "Game.h"
 
-
-
-
-Tile::Tile(const TileType& _type, const Vector2f& _pos) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE),GetPathWithType(_type)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos, bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE),GetPathWithType(_type)))
 {
 	type = _type;
 

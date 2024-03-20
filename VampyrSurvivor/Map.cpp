@@ -87,8 +87,8 @@ void Map::SetSuccessor()
 			//if (_canLeft)
 			//	grid[i]->AddSuccessor((i - 1 + size));
 		}
-		cout << "modulo : " << i % size << endl <<  grid[i]->ToString(grid[i]) << " " << i + 1 << " successors : " << grid[i]->pathfindingParam.successors.size() <<
-			" Pos : (" << grid[i]->GetShapePosition().x  <<","<< grid[i]->GetShapePosition().y << ")" << " Navigable : " << grid[i]->pathfindingParam.navigable << endl;
+		/*cout << "modulo : " << i % size << endl <<  grid[i]->ToString(grid[i]) << " " << i + 1 << " successors : " << grid[i]->pathfindingParam.successors.size() <<
+			" Pos : (" << grid[i]->GetShapePosition().x  <<","<< grid[i]->GetShapePosition().y << ")" << " Navigable : " << grid[i]->pathfindingParam.navigable << endl;*/
 	}
 }
 

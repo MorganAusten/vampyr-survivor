@@ -49,6 +49,8 @@ public:
 
 		int _rand = Random<int>((int)(_names.size())-1,1);
 
+		cout << _names[_rand] << endl;
+
 		return _names[_rand];
 	}
 
