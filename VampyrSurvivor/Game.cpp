@@ -39,8 +39,7 @@ void Game::Init()
 
 void Game::InitMouseSprite()
 {
-	mouse = new ShapeObject(ShapeData({}, { 50,50 }, "cursor.png"));
-	mouse->SetOriginAtMiddle();
+	mouse = new ShapeObject(ShapeData({}, { 100,100 }, "cursor.png"));
 }
 
 void Game::Update()

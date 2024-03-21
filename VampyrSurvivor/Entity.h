@@ -15,9 +15,7 @@ protected:
 
 public:
 	Entity();
-	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const float _maxHp, const float _damage);
-	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType);
-
+	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, const float _damage,const ActorType& _type = ActorType::NONE);
 public:
 	inline ProgressBar* GetLifeBar()const { return lifeBar; }
 	inline float GetHP()const { return hp; }

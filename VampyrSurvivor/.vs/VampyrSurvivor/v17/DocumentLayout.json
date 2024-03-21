@@ -3,40 +3,20 @@
   "WorkspaceRootPath": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Macro.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:MovementComponent.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Mob.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Mob.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:MovementComponent.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Canvas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Canvas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\ProgressBar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:ProgressBar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FA40A9D7-4AEC-4F8D-9E3F-D6890D7FDC46}|VampyrSurvivor.vcxproj|solutionrelative:Macro.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Macro.h",
+              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.h",
+              "RelativeDocumentMoniker": "Macro.h",
+              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.h",
+              "RelativeToolTip": "Macro.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-21T23:06:28.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Macro.cpp",
+              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.cpp",
+              "RelativeDocumentMoniker": "Macro.cpp",
+              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Macro.cpp",
+              "RelativeToolTip": "Macro.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-21T23:06:26.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AQIAACYAAAAAAAAAAAApwDgAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-20T22:15:12.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Game.cpp",
-              "RelativeDocumentMoniker": "Game.cpp",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Game.cpp",
-              "RelativeToolTip": "Game.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBsAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T21:49:52.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Mob.h",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.h",
-              "RelativeDocumentMoniker": "Mob.h",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.h",
-              "RelativeToolTip": "Mob.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAEAAAA",
+              "DocumentIndex": 0,
+              "Title": "Actor.h",
+              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Actor.h",
+              "RelativeDocumentMoniker": "Actor.h",
+              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Actor.h",
+              "RelativeToolTip": "Actor.h",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T21:46:47.431Z",
+              "WhenOpened": "2024-03-21T21:03:14.132Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovementComponent.cpp",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.cpp",
-              "RelativeDocumentMoniker": "MovementComponent.cpp",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.cpp",
-              "RelativeToolTip": "MovementComponent.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T21:42:07.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Player.h",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.h",
-              "RelativeDocumentMoniker": "Player.h",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Player.h",
-              "RelativeToolTip": "Player.h",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAEQAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T21:40:13.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Canvas.cpp",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Canvas.cpp",
-              "RelativeDocumentMoniker": "Canvas.cpp",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Canvas.cpp",
-              "RelativeToolTip": "Canvas.cpp",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAtwBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T21:39:38.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProgressBar.cpp",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\ProgressBar.cpp",
-              "RelativeDocumentMoniker": "ProgressBar.cpp",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\ProgressBar.cpp",
-              "RelativeToolTip": "ProgressBar.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T21:39:00.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Mob.cpp",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.cpp",
-              "RelativeDocumentMoniker": "Mob.cpp",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\Mob.cpp",
-              "RelativeToolTip": "Mob.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-20T21:38:02.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovementComponent.h",
-              "DocumentMoniker": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.h",
-              "RelativeDocumentMoniker": "MovementComponent.h",
-              "ToolTip": "D:\\GitHub\\vampyr-survivor\\VampyrSurvivor\\MovementComponent.h",
-              "RelativeToolTip": "MovementComponent.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T16:51:20.715Z"
             }
           ]
         }

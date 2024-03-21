@@ -5,8 +5,8 @@
 #include "ProgressBar.h"
 
 
-Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, float _speed, const float _damages) :
-	Entity(_name, _data, _collisionType, _maxHp, _damages)
+Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, float _speed, const float _damages, const ActorType& _type) :
+	Entity(_name, _data, _collisionType, _maxHp, _damages, _type)
 {
 	components.push_back(new MovementComponent(this, _speed));
 	components.push_back(new PathfindingComponent(this));
@@ -21,11 +21,13 @@ void Mob::Update(const float _deltaTime)
 	if (_positionIndex >= _path.size() - 1)
 		IsToRemove();
 	GetComponent<MovementComponent>()->Update();
+	if(!lifeBar->GetCurrentValue()<=0 && !IsToRemove())
+		lifeBar->SetShapePosition(GetShapePosition() + Vector2f(0, -50));
 }
 
 void Mob::TakeDamages(const float& _damages)
 {
-	lifeBar->SetValue(_damages);
+	lifeBar->ChangeValue(_damages);
 	if (lifeBar->GetCurrentValue() <= 0)
 		Dies();
 }

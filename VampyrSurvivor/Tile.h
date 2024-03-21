@@ -25,7 +25,7 @@ class Tile : public Actor
 	FPathFinding pathfindingParam;
 
 public:
-	Tile(const TileType& _type, const Vector2f& _pos,bool _navigable = true);
+	Tile(const TileType& _type, const Vector2f& _pos, bool _navigable = true);
 public:
 	FPathFinding& GetPathParams() { return pathfindingParam; }
 	string GetPathWithType(const TileType& _type);

@@ -1,18 +1,17 @@
 #include "Player.h"
 #include "ActorManager.h"
 #include "InputManager.h"
+#include "ProgressBar.h"
 #include "Mob.h"
 
 Player::Player()
 {
-	stat = new PlayerStat();
-	dammage = 20;
-	Register();
+
 }
 
 Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data)
 {
-	viewZoom = 1;
+	viewZoom = ZOOM;
 	stat = new PlayerStat();
 	viewOffset = Vector2f(0, 0);
 	dammage = 20;
@@ -67,25 +66,25 @@ void Player::InitView()
 
 void Player::OnClick()
 {
-	//for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
-	//{
-	//	Mob* _mob = (Mob*)_actor;
-	//	if (_mob)
-	//	{
-	//		Shape* _shape = _mob->GetDrawable();
-	//		FloatRect _rect = _shape->getGlobalBounds();
-
-	//		if (_rect.contains(InputManager::GetInstance().GetWorldPosition()))
-	//		{
-	//			cout <<  _mob->GetID() << endl;
-	//			cout << "TakesDamages" << endl;
-	//			//_mob->TakeDamages(dammage);
-	//		}
-	//	}
-	//}
 	Vector2f _halfWorldPosition =  Vector2f(SCREEN_WIDTH /2,SCREEN_HEIGHT/2) ;
 	Vector2f _mousePosition = InputManager::GetInstance().GetMousePosition() - _halfWorldPosition;
 	Vector2f _mousePositionOffset = Vector2f((_mousePosition.x + viewOffset.x * viewZoom) / viewZoom, (_mousePosition.y + viewOffset.y * viewZoom)/viewZoom);
+	for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
+	{
+		Mob* _mob = (Mob*)_actor;
+		if (_mob)
+		{
+			Shape* _shape = _mob->GetDrawable();
+			FloatRect _rect = _shape->getGlobalBounds();
+			if (_rect.contains(_mousePositionOffset) && _mob->GetActorType() == ActorType::MOB)
+			{
+				cout <<  _mob->GetID() << endl;
+				cout << "TakesDamages" << endl;
+				_mob->TakeDamages(-dammage);
+				 cout << "HP:" << _mob->GetLifeBar()->GetCurrentValue() << endl;
+			}
+		}
+	}
 }
 
 void Player::Register()

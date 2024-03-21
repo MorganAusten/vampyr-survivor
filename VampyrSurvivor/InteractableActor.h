@@ -34,7 +34,7 @@ public:
 	}
 
 public:
-	InteractableActor(const string& _name, const ShapeData& _data);
+	InteractableActor(const string& _name, const ShapeData& _data,const ActorType& _type = ActorType::NONE);
 
 private:
 	virtual void Register() override;

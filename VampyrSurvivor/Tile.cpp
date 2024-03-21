@@ -25,22 +25,19 @@ string Tile::GetPathWithType(const TileType& _type)
 		return _names[0];
 	}
 
-	int _rand = Random<int>((int)(_names.size()) - 1, 1);
+	int _rand = Random((int)(_names.size()) - 1, 1);
 
 	//cout << _names[_rand] << endl;
 
 	return _names[_rand];
 }
 
-Tile::Tile(const TileType& _type, const Vector2f& _pos,bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos,bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
 {
 	type = _type;
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
 
-	shape->setFillColor(type == TT_GRASS ? sf::Color::Red : sf::Color::Green);
-	shape->setOutlineColor(Color::Black);
-	shape->setOutlineThickness(-1.f);
 	shape->setOrigin(Vector2f(0.f, 0.f));
 }
 

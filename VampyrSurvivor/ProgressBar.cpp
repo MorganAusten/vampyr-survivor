@@ -4,19 +4,14 @@
 #include "HUD.h"
 #include "Macro.h"
 
-ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
+ProgressBar::ProgressBar(const ShapeData& _data,
     const ProgressType& _type, const float _maxValue)
     : ShapeWidget(_data)
 {
     type = _type;
-
-    foreground = new ShapeWidget(ShapeData(_data.position, _data.size, _path));
-
-    shapeObject->GetShape()->setFillColor(Color::Red);
-    shapeObject->GetShape()->setOutlineColor(Color::White);
-    shapeObject->GetShape()->setOutlineThickness(1.5f);
-
-	foreground->GetDrawable()->setFillColor(Color::Green);
+    originalScaleValue = GetDrawable()->getScale().x;
+    bgBar = new ShapeWidget(ShapeData(Vector2f(_data.position.x,_data.position.y+50), _data.size));
+	bgBar->GetDrawable()->setFillColor(Color::Black);
 
     size = _data.size;
     UpdateOriginAndPosition(size);
@@ -27,13 +22,13 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
 
 ProgressBar::~ProgressBar()
 {
-    delete foreground;
+    delete bgBar;
 }
 
 
 void ProgressBar::UpdateOriginAndPosition(const Vector2f& _size)
 {
-    Shape* _fgShape = foreground->GetDrawable();
+    Shape* _fgShape = bgBar->GetDrawable();
     const Vector2f& _barPosition = shapeObject->GetShapePosition();
 
     if (type == PT_LEFT)
@@ -56,6 +51,12 @@ void ProgressBar::UpdateOriginAndPosition(const Vector2f& _size)
         _fgShape->setOrigin(_fgShape->getOrigin() + Vector2f(0.0f, _size.y / 2.0f));
         _fgShape->setPosition(_barPosition + Vector2f(0.0f, _size.y / 2.0f));
     }
+}
+
+void ProgressBar::UpdateHP(const float& _amount)
+{
+    cout << _amount << endl;;
+    GetDrawable()->setScale(Vector2f(originalScaleValue * _amount, GetDrawable()->getScale().y));
 }
 
 IntRect ProgressBar::MakeRect(const float _percent)
@@ -97,7 +98,7 @@ IntRect ProgressBar::MakeRect(const float _percent)
 
 void ProgressBar::Update()
 {
-    Shape* _fgShape = foreground->GetDrawable();
+  /*  Shape* _fgShape = foreground->GetDrawable();
 
     const float _fillPercent = currentValue / maxValue;
     const IntRect& _rect = MakeRect(_fillPercent);
@@ -114,6 +115,6 @@ void ProgressBar::Update()
     Vector2f _scale = _fgShape->getScale();
     if (_directions[type].x) _scale.x = _fillPercent;
     if (_directions[type].y) _scale.y = _fillPercent;
-    _fgShape->setScale(_scale);
+    _fgShape->setScale(_scale);*/
 }
 

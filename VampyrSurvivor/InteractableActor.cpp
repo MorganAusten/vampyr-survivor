@@ -8,7 +8,7 @@
 #define PATH_DISCUSSION "UIs/Discussions/Dialog.png"
 #define FONT "Font.ttf"
 
-InteractableActor::InteractableActor(const string& _name, const ShapeData& _data) : Actor(_name, _data, CT_OVERLAP)
+InteractableActor::InteractableActor(const string& _name, const ShapeData& _data, const ActorType& _type) : Actor(_name, _data,_type, CT_OVERLAP)
 {
 	canvas = new Canvas(STRING_ID("Interactable"));
 	isOpen = false;

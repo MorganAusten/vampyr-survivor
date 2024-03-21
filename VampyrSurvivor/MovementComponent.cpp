@@ -32,7 +32,6 @@ void MovementComponent::Move()
 	Shape* _shape = owner->GetShape();
 	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed *0.0001);
 	_shape->setPosition(_position);
-	_owner->GetLifeBar()->SetShapePosition(_position + Vector2f(0, -50));
 	if (lerpTimer >= 1)
 	{
 		if (positionIndex == owner->GetComponent<PathfindingComponent>()->GetPath().size() - 1)

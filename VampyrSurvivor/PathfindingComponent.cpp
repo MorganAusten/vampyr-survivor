@@ -16,7 +16,7 @@ void PathfindingComponent::ComputeNewPath()
     start = FindClosestTile(owner);
     destination = FindClosestTile(map->GetGrid()[60]);
     path = astar->ComputePath(start, destination);
-    DrawPath();
+    //DrawPath();
 }
 
 /// <summary>
@@ -50,7 +50,7 @@ Tile* PathfindingComponent::FindClosestTile(ShapeObject* _object)
 
 void PathfindingComponent::DrawPath()
 {
-    for (Tile* _tile : path)
-        _tile->GetShape()->setFillColor(sf::Color::Blue);
+  /*  for (Tile* _tile : path)
+        _tile->GetShape()->setFillColor(sf::Color::Blue);*/
 }
 

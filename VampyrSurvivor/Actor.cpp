@@ -3,11 +3,11 @@
 #include "Timer.h"
 #include "Macro.h"
 
-Actor::Actor(const string& _name, const ShapeData& _data, const CollisionType& _collisionType)
+Actor::Actor(const string& _name, const ShapeData& _data,const ActorType& _type, const CollisionType& _collisionType)
 	: ShapeObject(_data), IManagable(_name)
 {
 	Register();
-	
+	type = _type;
 	SetOriginAtMiddle(/*GetDrawable()*/);
 
 	animation = new AnimationComponent(this);

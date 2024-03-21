@@ -17,6 +17,7 @@ using namespace sf;
 #pragma warning (disable :26495) // warning Always initialize
 
 #define MAX_VALUE 3.40282346638e38f;
+#define ZOOM 2
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
