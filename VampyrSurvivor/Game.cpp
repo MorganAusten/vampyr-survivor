@@ -6,6 +6,7 @@
 #include "MenuManager.h"
 #include "PathfindingComponent.h"
 #include "Mob.h"
+#include "SpriteUtils.h"
 #include "HUD.h"
 
 RenderWindow Game::window;
@@ -25,7 +26,7 @@ void Game::Start()
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(0,0), Vector2f(10, 10)), CollisionType::CT_NONE, 100,10, 20);
+	MULTI_MOB(MOB_WOLF(RANDOM_POS,Random(10,2)), 15);
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),
@@ -38,7 +39,7 @@ void Game::Init()
 
 void Game::InitMouseSprite()
 {
-	mouse = new ShapeObject(ShapeData({}, { 5,5 }, "cursor.png"));
+	mouse = new ShapeObject(ShapeData({}, { 50,50 }, "cursor.png"));
 	mouse->SetOriginAtMiddle();
 }
 

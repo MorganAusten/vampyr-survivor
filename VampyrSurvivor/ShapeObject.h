@@ -62,6 +62,7 @@ public:
 		return shape->getGlobalBounds().getSize();
 	}
 
+
 public:
 	ShapeObject() = default;
 	ShapeObject(const ShapeData& _data);

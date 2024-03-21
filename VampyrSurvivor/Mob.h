@@ -24,6 +24,7 @@ public:
 	void ComputeNewPath();
 	void PassedThePortal();
 private:
+	void InitAnims();
 	void Dies();
 };
 

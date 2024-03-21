@@ -7,7 +7,7 @@ struct BuildingData
 	int cost;
 	int upgradeCost;
 	int maxLevel;
-	int wawesToUnlock;
+	int wavesToUnlock;
 
 public:
 	BuildingData() = default;
@@ -17,6 +17,7 @@ public:
 		cost = _cost;
 		upgradeCost = _upgradeCost;
 		maxLevel = _maxLevel;
+	
 	}
 };
 

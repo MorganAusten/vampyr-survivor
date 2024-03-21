@@ -1,6 +1,7 @@
 #include "Mob.h"
 #include "MovementComponent.h"
 #include "pathFindingComponent.h"
+#include "SpriteUtils.h"
 #include "ProgressBar.h"
 
 
@@ -10,6 +11,7 @@ Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _coll
 	components.push_back(new MovementComponent(this, _speed));
 	components.push_back(new PathfindingComponent(this));
 	ComputeNewPath();
+	InitAnims();
 }
 
 void Mob::Update(const float _deltaTime)
@@ -43,6 +45,15 @@ void Mob::PassedThePortal()
 {
 	//WaveManager::GetInstance()->DecreaseMobCounter()
 	Dies();
+}
+
+void Mob::InitAnims()
+{
+	AnimationData _animData = WOLF_WALK_ANIM;
+	AnimationData _animData2 = WOLF_ATTACK_ANIM;
+	AnimationData _animData3 = WOLF_DEATH_ANIM;
+	vector<AnimationData> _anims = { _animData, _animData2, _animData3};
+	InitAnimations(_anims);
 }
 
 void Mob::Dies()

@@ -12,7 +12,7 @@ Player::Player()
 
 Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data)
 {
-	viewZoom = 3;
+	viewZoom = 1;
 	stat = new PlayerStat();
 	viewOffset = Vector2f(0, 0);
 	dammage = 20;
@@ -86,7 +86,6 @@ void Player::OnClick()
 	Vector2f _halfWorldPosition =  Vector2f(SCREEN_WIDTH /2,SCREEN_HEIGHT/2) ;
 	Vector2f _mousePosition = InputManager::GetInstance().GetMousePosition() - _halfWorldPosition;
 	Vector2f _mousePositionOffset = Vector2f((_mousePosition.x + viewOffset.x * viewZoom) / viewZoom, (_mousePosition.y + viewOffset.y * viewZoom)/viewZoom);
-	cout << "[Player::OnClick] => _mousePositionOffset = (" << _mousePositionOffset.x << "," << _mousePositionOffset.y << ")" << endl;
 }
 
 void Player::Register()

@@ -6,6 +6,7 @@
 
 class TextureManager : public Singleton<TextureManager>, public IManager<string, TextureData>
 {
+	TextureData* _textureData;
 public:
 	void Load(ShapeObject* _object, const string& _path, const bool _isRepeated = false, const bool _smooth = true);
 	void Load(Sprite* _sprite, const string& _path, const bool _isRepeated = false, const bool _smooth = true);

@@ -5,16 +5,19 @@ void TextureManager::Load(ShapeObject* _object, const string& _path, const bool 
 {
 	if (_path == "") return;
 
-	TextureData* _textureData = Get(_path);
+	_textureData = Get(_path);
 	if (!_textureData)
 	{
 		_textureData = new TextureData(_path);
-		string _texturePath = "Assets /Textures /" + _path;
+		string _texturePath = "Assets\\Textures\\" + _path;
 		if (!_textureData->loadFromFile(_texturePath))
 		{
-			cerr << "La texture n'a pas été correctement chargée !" << endl;
+			cerr << "La texture " + _path + " n'a pas été correctement chargée !" << endl;
 		}
-
+		else
+		{
+			cout << "nik" << endl;
+		}
 		_textureData->setRepeated(_isRepeated);
 		_textureData->setSmooth(_smooth);
 	}

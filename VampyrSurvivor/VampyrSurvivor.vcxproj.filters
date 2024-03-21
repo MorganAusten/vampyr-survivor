@@ -76,6 +76,9 @@
     <Filter Include="Fichiers sources\Map">
       <UniqueIdentifier>{00ab967d-f585-4895-a9ac-a180a7af8643}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Utils">
+      <UniqueIdentifier>{3bbaef7d-2f05-4342-9cc7-1c1609a43159}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -403,6 +406,9 @@
     </ClInclude>
     <ClInclude Include="Building.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteUtils.h">
+      <Filter>Fichiers sources\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

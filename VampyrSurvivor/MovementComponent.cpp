@@ -2,6 +2,7 @@
 #include"TimerManager.h"
 #include "Kismet.h"
 #include "Mob.h"
+#include "SpriteUtils.h"
 #include "ProgressBar.h"
 #include "PathfindingComponent.h"
 
@@ -31,13 +32,13 @@ void MovementComponent::Move()
 	Shape* _shape = owner->GetShape();
 	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed *0.0001);
 	_shape->setPosition(_position);
-	_owner->GetLifeBar()->SetShapePosition(_position + Vector2f(0, -20));
+	_owner->GetLifeBar()->SetShapePosition(_position + Vector2f(0, -50));
 	if (lerpTimer >= 1)
 	{
 		if (positionIndex == owner->GetComponent<PathfindingComponent>()->GetPath().size() - 1)
 		{
 			_owner->PassedThePortal();
-			Mob* _mob = new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(600, 0), Random(600, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100, Random(2,1), 20);
+			MOB_WOLF(RANDOM_POS,Random(10,2));
 			return;
 		}
 		lerpTimer = 0;

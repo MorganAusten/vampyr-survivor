@@ -14,7 +14,7 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
 
     shapeObject->GetShape()->setFillColor(Color::Red);
     shapeObject->GetShape()->setOutlineColor(Color::White);
-    shapeObject->GetShape()->setOutlineThickness(3);
+    shapeObject->GetShape()->setOutlineThickness(1.5f);
 
 	foreground->GetDrawable()->setFillColor(Color::Green);
 
