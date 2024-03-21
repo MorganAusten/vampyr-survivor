@@ -19,12 +19,10 @@ void ActorManager::Init()
 void ActorManager::Update()
 {
 	const float _deltaTime = TimerManager::GetInstance().GetDeltaTime();
-	int _size  = GetAllValues().size();
-	int _var = 0;
+
 	for (Actor* _actor : GetAllValues())
 	{
 		_actor->Update(stop ? 0.0f : _deltaTime);
-		++_var;
 	}
 
 	GarbageValues();

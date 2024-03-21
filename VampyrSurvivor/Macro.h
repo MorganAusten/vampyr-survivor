@@ -68,7 +68,7 @@ vector<T*> Reverse(vector<T*> _vector)
 {
 
 	vector<T*> _result;
-	for (int i = _vector.size() - 1, x = 0; i >= 0; i--, x++)
+	for (size_t i = _vector.size() - 1, x = 0; x < _vector.size(); i--, x++)
 		_result.push_back(_vector[i]); 
 	return _result;
 }
@@ -118,3 +118,8 @@ void EraseElement(vector<T*>& _vector, const T* _element)
 	_vector.erase(remove(_vector.begin(), _vector.end(), _element), _vector.end());
 }
 
+template <typename T>
+void EraseElement(vector<T*>* _vector, const T* _element)
+{
+	_vector->erase(remove(_vector->begin(), _vector->end(), _element), _vector->end());
+}

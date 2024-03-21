@@ -1,6 +1,7 @@
 #include "CollisionComponent.h"
 #include "Actor.h"
 #include "ActorManager.h"
+#include "Tile.h"
 #include "Kismet.h"
 
 CollisionComponent::CollisionComponent(Actor* _owner, const CollisionType& _type) : Component(_owner)
@@ -36,6 +37,11 @@ CollisionComponent::~CollisionComponent()
 bool CollisionComponent::CheckCollision(const Vector2f& _position)
 {
 	return type == CT_BLOCK && boxCollision->GetDrawable()->getGlobalBounds().contains(_position);
+}
+
+bool CollisionComponent::CheckCollision(Tile* _tile)
+{
+	return _tile->GetPathParams().hasObstacle;
 }
 
 bool CollisionComponent::CheckCollision(const vector<Actor*>& _ignoredActors)

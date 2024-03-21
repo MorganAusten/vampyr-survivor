@@ -41,7 +41,9 @@ class PathfindingComponent;
 
 class Player : public Actor
 {
+	float viewZoom;
 	View* view;
+	Vector2f viewOffset;
 	Vector2f direction;
 	PlayerStat* stat;
 	int dammage;

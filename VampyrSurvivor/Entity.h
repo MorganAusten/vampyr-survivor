@@ -10,8 +10,9 @@ protected:
 	float maxHp;
 	float hp;
 	float damage;
+	Canvas* canvas;
 	ProgressBar* lifeBar;
-	Canvas* progressBarCanvas;
+
 public:
 	Entity();
 	Entity(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const float _maxHp, const float _damage);

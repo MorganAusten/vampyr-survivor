@@ -3,6 +3,8 @@
 #include "ShapeObject.h"
 #include <functional>
 
+class Tile;
+
 enum CollisionType
 {
 	CT_NONE = 1,
@@ -31,6 +33,7 @@ public:
 
 public:
 	bool CheckCollision(const Vector2f& _position);
+	bool CheckCollision(Tile* _tile);
 	bool CheckCollision(const vector<Actor*>& _ignoredActors = vector<Actor*>());
 };
 

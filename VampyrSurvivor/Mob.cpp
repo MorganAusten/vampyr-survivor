@@ -7,7 +7,7 @@
 Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const float _maxHp, float _speed, const float _damages) :
 	Entity(_name, _data, _collisionType, _maxHp, _damages)
 {
-	components.push_back(new MovementComponent(this,_speed));
+	components.push_back(new MovementComponent(this, _speed));
 	components.push_back(new PathfindingComponent(this));
 	ComputeNewPath();
 }
@@ -19,7 +19,13 @@ void Mob::Update(const float _deltaTime)
 	if (_positionIndex >= _path.size() - 1)
 		IsToRemove();
 	GetComponent<MovementComponent>()->Update();
-	lifeBar->SetShapePosition(GetShapePosition() +  Vector2f(0,-20));
+}
+
+void Mob::TakeDamages(const float& _damages)
+{
+	lifeBar->SetValue(_damages);
+	if (lifeBar->GetCurrentValue() <= 0)
+		Dies();
 }
 
 void Mob::ComputeNewPath()
@@ -35,6 +41,12 @@ void Mob::ComputeNewPath()
 
 void Mob::PassedThePortal()
 {
+	//WaveManager::GetInstance()->DecreaseMobCounter()
+	Dies();
+}
+
+void Mob::Dies()
+{
 	SetToRemove(true);
-	lifeBar->SetVisible(false);
+	canvas->Unregister(lifeBar);
 }

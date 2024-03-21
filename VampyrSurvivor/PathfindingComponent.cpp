@@ -29,17 +29,17 @@ Tile* PathfindingComponent::FindClosestTile(ShapeObject* _object)
 {
     Map* _map = Game::GetMap();
     vector<Tile*> _grid = _map->GetGrid();
-    int _gridSize = _grid.size();
+    size_t _gridSize = _grid.size();
 
     if (_gridSize == 0) return nullptr;
 
     float _distance = MAX_VALUE;
     Tile* _closest = nullptr;
-    for (int i = 0; i < _gridSize; i++)
+    for (size_t i = 0; i < _gridSize; i++)
     {
         Tile* _tile = _grid[i];
         float _newDistance = Distance(_object->GetShapePosition(), _tile->GetShapePosition());
-        if (_newDistance < _distance && _tile->pathfindingParam.navigable)
+        if (_newDistance < _distance && _tile->GetPathParams().navigable)
         {
             _distance = _newDistance;
             _closest = map->GetGrid()[i];

@@ -1,5 +1,6 @@
 #include "Canvas.h"
 #include "HUD.h"
+#include "Macro.h"
 
 //Rajouter un delete pour un objet précis
 
@@ -49,3 +50,15 @@ void Canvas::AddWidget(Widget* _widget)
 	_widgets[_widget->GetType()]->push_back(_widget);
 }
 
+void Canvas::Unregister(Widget* _widget)
+{
+	vector<Widget*>* _widgets[] = {
+		&uiWidgets,
+		&worldWidgets
+	};
+
+	EraseElement(_widgets[_widget->GetType()], _widget);
+
+	delete _widget;
+	_widget = nullptr;
+}

@@ -20,17 +20,12 @@ Game::~Game()
 void Game::Start()
 {
 	player = new Player("Player", ShapeData());
+	InitMouseSprite();
 	Game::map = new Map();
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(0,0), Vector2f(10, 10)), CollisionType::CT_NONE, 100,100, 20);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,300, 20);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(15, 15)), CollisionType::CT_NONE, 100,150, 20);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,50, 20);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,200, 20);
-	new Mob(STRING_ID("mob"), ShapeData(Vector2f(Random(400, 0),Random(400, 0)), Vector2f(10, 10)), CollisionType::CT_NONE, 100,20, 20);
-	InitMouseSprite();
+	new Mob(STRING_ID("mob"), ShapeData(Vector2f(0,0), Vector2f(10, 10)), CollisionType::CT_NONE, 100,10, 20);
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),
@@ -43,8 +38,8 @@ void Game::Init()
 
 void Game::InitMouseSprite()
 {
-	mouse = new ShapeObject(ShapeData({}, { 50,50 }, "cursor.png"));
-	//mouse->SetOriginAtMiddle();
+	mouse = new ShapeObject(ShapeData({}, { 5,5 }, "cursor.png"));
+	mouse->SetOriginAtMiddle();
 }
 
 void Game::Update()
@@ -86,7 +81,7 @@ void Game::DrawWorldUIs()
 	{
 		for (Widget* _widget : _canvas->GetWorldWidgets())
 		{
-			if (!_widget->IsVisible()) continue;
+			if (!_widget || !_widget->IsVisible()) continue;
 			window.draw(*_widget->GetDrawable());
 		}
 	}

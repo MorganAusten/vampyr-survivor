@@ -8,7 +8,6 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
     const ProgressType& _type, const float _maxValue)
     : ShapeWidget(_data)
 {
-    canva = new Canvas(STRING_ID("ProgressBar"), FloatRect(Vector2f(10000000,0),Vector2f(1, 1)));
     type = _type;
 
     foreground = new ShapeWidget(ShapeData(_data.position, _data.size, _path));
@@ -28,7 +27,7 @@ ProgressBar::ProgressBar(const ShapeData& _data, const string& _path,
 
 ProgressBar::~ProgressBar()
 {
-    delete  foreground;
+    delete foreground;
 }
 
 
