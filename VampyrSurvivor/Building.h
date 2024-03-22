@@ -26,6 +26,9 @@ class Building : public Entity
 	BuildingData* data;
 
 public:
+	virtual string GetPath() = 0;
+
+public:
 	Building();
 	Building(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const BuildingData& _bData,
 	const int _maxHp,const float _damage = 0);

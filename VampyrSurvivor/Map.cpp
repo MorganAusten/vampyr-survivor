@@ -22,9 +22,9 @@ void Map::InitMap()
 	map<char, function<void(const Vector2f& _position)>> _map =
 	{
 		//Chaque actor est draw dans le update du actorManager, donc quand on créer un actor et qu'il se register, ça le draw automatiquement 
-		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position,false)); }},
+		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position,nullptr,false)); }},
 		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }},
-		{'B',[this](const Vector2f& _position) { new Barrier(_position); grid.push_back(new Tile(TT_PATH,_position));}},
+		{'B',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position,new Barrier(_position)));}},
 	};
 
 	string _line;

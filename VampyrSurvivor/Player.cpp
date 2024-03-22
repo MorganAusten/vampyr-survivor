@@ -17,6 +17,7 @@ Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data
 	dammage = 20;
 	InitView();
 	InitInput();
+	shop = new Shop("PlayerShop");
 	direction = { 0,0 };
 	Register();
 }
@@ -55,7 +56,11 @@ void Player::InitInput()
 
 	new ActionMap("PlayerAction",
 		{
-			ActionData("MakeDamage",[this]() { OnClick(); }, {Event::MouseButtonPressed, Mouse::Left})
+			ActionData("MakeDamage",[this]() { if(!shop->isOpen())OnClick(); }, {Event::MouseButtonPressed, Mouse::Left}),
+			ActionData("ToggleShop",[this]() {
+				shop->ToggleShop(); 
+				}, {Event::KeyPressed, Keyboard::B}),
+
 		});
 }
 

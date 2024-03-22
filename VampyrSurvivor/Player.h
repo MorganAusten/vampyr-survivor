@@ -2,6 +2,7 @@
 #include "Actor.h"
 #include "Label.h"
 #include "Canvas.h"
+#include "Shop.h"
 
 struct PlayerStat
 {
@@ -46,6 +47,7 @@ class Player : public Actor
 	Vector2f viewOffset;
 	Vector2f direction;
 	PlayerStat* stat;
+	Shop* shop;
 	int dammage;
 
 public:

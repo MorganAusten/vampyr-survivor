@@ -32,9 +32,10 @@ string Tile::GetPathWithType(const TileType& _type)
 	return _names[_rand];
 }
 
-Tile::Tile(const TileType& _type, const Vector2f& _pos,bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
 {
 	type = _type;
+	building = _building;
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
 

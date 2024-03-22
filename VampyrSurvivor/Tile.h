@@ -1,6 +1,7 @@
 #pragma once
 #include "Actor.h"
 #include "Macro.h"
+#include "Building.h"
 
 enum TileType
 {
@@ -23,9 +24,10 @@ class Tile : public Actor
 	TileType type;
 	sf::Vector2f position;
 	FPathFinding pathfindingParam;
+	Building* building;
 
 public:
-	Tile(const TileType& _type, const Vector2f& _pos, bool _navigable = true);
+	Tile(const TileType& _type, const Vector2f& _pos,Building* _building = nullptr, bool _navigable = true);
 public:
 	FPathFinding& GetPathParams() { return pathfindingParam; }
 	string GetPathWithType(const TileType& _type);

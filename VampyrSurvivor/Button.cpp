@@ -8,6 +8,12 @@ Button::Button(const ShapeData& _data, const ButtonData& _buttonData) : ShapeWid
 	isHeld = false;
 	foreground = nullptr;
 	data = _buttonData;
+
+	if (!_buttonData.hoveredCallback && !_buttonData.unHoveredCallback)
+	{
+		data.SetHoveredCallback([&]() {GetDrawable()->setOutlineThickness(-2.f); });
+		data.SetUnHoveredCallback([&]() {GetDrawable()->setOutlineThickness(0.f); });
+	}
 }
 
 

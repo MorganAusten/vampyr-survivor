@@ -27,6 +27,29 @@ struct ButtonData
 		heldCallback = _heldCallback;
 	};
 
+	ButtonData(const function<void()>& _pressedCallback,
+		const function<void()>& _releasedCallback,
+		const function<void()>& _heldCallback)
+	{
+		hoveredCallback = nullptr;
+		unHoveredCallback = nullptr;
+
+		pressedCallback = _pressedCallback;
+		releasedCallback = _releasedCallback;
+
+		heldCallback = _heldCallback;
+	}
+
+	void SetHoveredCallback(const function<void()>& _hoveredCallback)
+	{
+		hoveredCallback = _hoveredCallback;
+	}
+
+	void SetUnHoveredCallback(const function<void()>& _unHoveredCallback)
+	{
+		unHoveredCallback = _unHoveredCallback;
+	}
+
 };
 
 class Button : public ShapeWidget
@@ -60,7 +83,8 @@ public:
 	}
 
 public:
-	Button(const ShapeData& _data, const ButtonData& _buttonData = ButtonData());
+	//Button(const ShapeData& _data, const ButtonData& _buttonData = ButtonData());
+	Button(const ShapeData& _data, const ButtonData& _buttonData);
 
 public:
 	bool OnPressed();

@@ -79,6 +79,7 @@ void Game::DrawWorldUIs()
 {
 	for (Canvas* _canvas : HUD::GetInstance().GetAllValues())
 	{
+		if (!_canvas->IsVisible()) continue;
 		for (Widget* _widget : _canvas->GetWorldWidgets())
 		{
 			if (!_widget || !_widget->IsVisible()) continue;
@@ -100,6 +101,7 @@ void Game::DrawUIs()
 {
 	for (Canvas* _canvas : HUD::GetInstance().GetAllValues())
 	{
+		if (!_canvas->IsVisible()) continue;
 		for (Widget* _widget : _canvas->GetUiWidgets())
 		{
 			if (!_widget->IsVisible()) continue;

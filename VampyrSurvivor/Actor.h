@@ -11,7 +11,7 @@ enum ActorType
 	NONE,
 	FIELD,
 	MOB,
-	GPE
+	GPE,
 };
 
 class Actor : public ShapeObject, public IManagable<string>
