@@ -143,9 +143,11 @@
     <ClCompile Include="ActionMap.cpp" />
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorManager.cpp" />
+    <ClCompile Include="ActorSpawner.cpp" />
     <ClCompile Include="AlstarAlgo.cpp" />
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimationComponent.cpp" />
+    <ClCompile Include="Assault.cpp" />
     <ClCompile Include="Barrier.cpp" />
     <ClCompile Include="Building.cpp" />
     <ClCompile Include="Button.cpp" />
@@ -184,6 +186,8 @@
     <ClCompile Include="SoundData.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="SoundSystem.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="SpawnerManager.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="TextureData.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -198,9 +202,11 @@
     <ClInclude Include="ActionMap.h" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorManager.h" />
+    <ClInclude Include="ActorSpawner.h" />
     <ClInclude Include="AlstarAlgo.h" />
     <ClInclude Include="Animation.h" />
     <ClInclude Include="AnimationComponent.h" />
+    <ClInclude Include="Assault.h" />
     <ClInclude Include="Barrier.h" />
     <ClInclude Include="Building.h" />
     <ClInclude Include="Button.h" />
@@ -241,6 +247,8 @@
     <ClInclude Include="SoundData.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="SoundSystem.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="SpawnerManager.h" />
     <ClInclude Include="SpriteUtils.h" />
     <ClInclude Include="TextObject.h" />
     <ClInclude Include="TextureData.h" />
