@@ -35,8 +35,6 @@ public:
 
 private:
 	void InitShop();
-	
-
 
 public:
 	void AddBuilding(const string& _buildingId);

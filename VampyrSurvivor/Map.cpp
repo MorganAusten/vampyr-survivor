@@ -3,6 +3,9 @@
 #include "Barrier.h"
 #include "PathfindingComponent.h"
 #include "Player.h"
+#include "Spawner.h"
+#include "SpriteUtils.h"
+#include "ActorSpawner.h"
 #include "Mob.h"
 
 Map::Map()
@@ -22,9 +25,10 @@ void Map::InitMap()
 	map<char, function<void(const Vector2f& _position)>> _map =
 	{
 		//Chaque actor est draw dans le update du actorManager, donc quand on créer un actor et qu'il se register, ça le draw automatiquement 
-		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position,nullptr,false)); }},
+		{'#',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_GRASS,_position,nullptr,false,false)); }},
 		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }},
 		{'B',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position,new Barrier(_position)));}},
+		{'S',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_SPAWNER,_position,nullptr,true)); }},
 	};
 
 	string _line;
@@ -34,6 +38,7 @@ void Map::InitMap()
 
 void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std::function<void(const sf::Vector2f& _position)>>& _map, sf::Vector2i& _startPos)
 {
+	int _index = 0;
 	//X
 	while (getline(_in, _line))
 	{
@@ -49,10 +54,12 @@ void Map::GenerateMap(std::ifstream& _in, std::string& _line, std::map<char, std
 				if (!sizeSet) size++;
 			}
 			_startPos.x++;
+			_index++;
 		}
 		if (!sizeSet)
 			sizeSet = true;
 		_startPos.x = 0;
+		_index;
 		_startPos.y++;
 	}
 	SetSuccessor();

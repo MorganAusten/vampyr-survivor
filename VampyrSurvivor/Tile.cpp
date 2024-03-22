@@ -1,5 +1,8 @@
 #include "Tile.h"
 #include "Macro.h"
+#include "SpriteUtils.h"
+#include "Spawner.h"
+#include "Assault.h"
 #include "Game.h"
 
 string Tile::GetPathWithType(const TileType& _type)
@@ -20,9 +23,14 @@ string Tile::GetPathWithType(const TileType& _type)
 		"Flower11.png",
 		"Flower12.png",
 	};
+
 	if (_type == TT_PATH)
 	{
 		return _names[0];
+	}
+	else if (_type == TT_SPAWNER)
+	{
+		return 	"Spawner.png";
 	}
 
 	int _rand = Random((int)(_names.size()) - 1, 1);
@@ -32,14 +40,22 @@ string Tile::GetPathWithType(const TileType& _type)
 	return _names[_rand];
 }
 
-Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _navigable) : Actor(STRING_ID("Tile"),ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _hasSpawner, bool _navigable) : Actor(STRING_ID("Tile"), ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
 {
 	type = _type;
+	hasSpawner = _hasSpawner;
 	building = _building;
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
 
 	shape->setOrigin(Vector2f(0.f, 0.f));
+	if (hasSpawner)
+	{
+		cout << "coucou" << endl;
+		spawner = new Spawner({ {ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} ,
+			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT},
+			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} });
+	}
 }
 
 std::string Tile::ToString(Object* _object)

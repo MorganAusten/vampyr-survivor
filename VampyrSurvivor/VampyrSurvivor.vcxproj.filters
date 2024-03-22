@@ -253,7 +253,7 @@
       <Filter>Fichiers sources\Object\Actor</Filter>
     </ClCompile>
     <ClCompile Include="ActorSpawner.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -435,7 +435,7 @@
       <Filter>Fichiers sources\Object\Actor</Filter>
     </ClInclude>
     <ClInclude Include="ActorSpawner.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers sources\Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

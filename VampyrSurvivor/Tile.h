@@ -3,9 +3,11 @@
 #include "Macro.h"
 #include "Building.h"
 
+class Spawner;
+
 enum TileType
 {
-	TT_NONE,TT_GRASS,TT_PATH
+	TT_NONE,TT_GRASS,TT_PATH,TT_SPAWNER
 };
 
 struct FPathFinding
@@ -25,9 +27,11 @@ class Tile : public Actor
 	sf::Vector2f position;
 	FPathFinding pathfindingParam;
 	Building* building;
+	Spawner* spawner;
+	bool hasSpawner;
 
 public:
-	Tile(const TileType& _type, const Vector2f& _pos,Building* _building = nullptr, bool _navigable = true);
+	Tile(const TileType& _type, const Vector2f& _pos,Building* _building = nullptr, bool _hasSpawner = false, bool _navigable = true);
 public:
 	FPathFinding& GetPathParams() { return pathfindingParam; }
 	string GetPathWithType(const TileType& _type);

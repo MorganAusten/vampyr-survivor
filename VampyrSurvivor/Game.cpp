@@ -26,7 +26,6 @@ void Game::Start()
 	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
-	MULTI_MOB(MOB_WOLF(RANDOM_POS,Random(10,2)), 15);
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),

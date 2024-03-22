@@ -14,10 +14,6 @@ void TextureManager::Load(ShapeObject* _object, const string& _path, const bool 
 		{
 			cerr << "La texture " + _path + " n'a pas été correctement chargée !" << endl;
 		}
-		else
-		{
-			cout << "nik" << endl;
-		}
 		_textureData->setRepeated(_isRepeated);
 		_textureData->setSmooth(_smooth);
 	}

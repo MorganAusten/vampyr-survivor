@@ -7,9 +7,9 @@
 using namespace std;
 
 class Mob;
-class ActorSpawner;
 class Spawner;
 class Timer;
+class Player;
 
 enum SpawnType
 {
@@ -19,20 +19,32 @@ enum SpawnType
 
 class Assault
 {
-	Spawner* owner;
+	int mobIndex;
+	int spawnIndex;
 	float timeBetweenSpawns;
+	Spawner* spawnerOwner;
+	Player* playerOwner;
+	Timer* spawningTimer;
 	vector<MobID> mobs;
 	vector<BuildingID> buildings;
-	Timer* spawningTimer;
-	ActorSpawner* actorSpawner;
+	vector<int> numbersOfActor;
 	SpawnType type;
 
 public:
 	Assault() = default;
-	Assault( Spawner* _owner,const vector<MobID>& _mobs, const vector<int>& _number, const float& _timeBetweenSpawns = 2.f);
-	Assault(Spawner* _owner,const vector<BuildingID>& _building, const vector<int>& _number, const float& _timeBetweenSpawns = 2.f);
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="_mobs"></param>
+	/// Nombres
+	/// <param name="_number"></param>
+	/// <param name="_timeBetweenSpawns"></param>
+	Assault(const vector<MobID>& _mobs, const vector<int>& _number, const float& _timeBetweenSpawns = 2.f);
+	Assault(const vector<BuildingID>& _building, const vector<int>& _number, const float& _timeBetweenSpawns = 2.f);
 public:
-	void Start();
+	inline void SetOwner(Spawner* _owner) { spawnerOwner = _owner; }
+	inline void SetOwner(Player* _owner) { playerOwner = _owner; }
+	inline void Start() { spawningTimer->Start(); }
 	void Spawn();
 };
 

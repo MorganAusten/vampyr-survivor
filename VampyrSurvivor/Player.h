@@ -2,34 +2,42 @@
 #include "Actor.h"
 #include "Label.h"
 #include "Canvas.h"
+#include "SpriteUtils.h"
 #include "Shop.h"
 
 struct PlayerStat
 {
 	int dammage;
 	int money;
+	int score;
 	Label* moneyText;
+	Label* scoreText;
 	Canvas* canvas;
 public:
 	PlayerStat() 
 	{
 		dammage = 0;
 		money = 0;
+		score = 0;
 
 		canvas = new Canvas("PlayerStat");
 		const Vector2f& _positon = Vector2f(1280 * 90 / 100, 720 * 5 / 100);
 		moneyText = new Label(TextData(to_string(money), _positon, "Font.ttf", 30, Color::Red));
 		canvas->AddWidget(moneyText);
 	}
-	PlayerStat(int _dammage, int _money, int _level)
+
+	PlayerStat(const int& _dammage,const int& _money, const int& _level,const Vector2f& _pos )
 	{
 		dammage = _dammage;
 		money = _money;
+		score = _money;
 
 		canvas = new Canvas("PlayerStat");
-		const Vector2f& _positon = Vector2f(1280 * 90 / 100, 720 * 5 / 100);
-		moneyText = new Label(TextData(to_string(money), _positon, "Font.ttf", 30, Color::Red));
+		const Vector2f& _position = _pos ;
+		moneyText = new Label(TextData(to_string(money), _position, "Font.ttf", 30, Color::Red));
+		scoreText = new Label(TextData(to_string(score), Vector2f(_position.x, _position.y + 20), "Font.ttf", 30, Color::White));
 		canvas->AddWidget(moneyText);
+		canvas->AddWidget(scoreText);
 	}
 
 	void SetString(const string& _value)
@@ -53,8 +61,7 @@ class Player : public Actor
 public:
 	//TODO Remove(Test)
 	PathfindingComponent* pathComp;
-
-	PlayerStat* GetStat() const { return stat; }
+	PlayerStat* GetStat() { return stat; }
 
 
 public:

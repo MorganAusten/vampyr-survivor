@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "Animation.h"
-#include "Macro.h"
 
 #pragma region Assault
 #define ASSAULT_W1_0 new Assault(vector<Mob*> {MULTI_MOB(MOB_WOLF,5)});
@@ -9,11 +8,13 @@
 #define ASSAULT_W1_2 new Assault(vector<Mob*> {MULTI_MOB(MOB_WOLF,7)});
 #pragma endregion Assault
 
+#pragma region Player
+#define CURRENT_MONEY_POS Vector2f(1280 * 90 / 100, 720 * 5 / 100)
+#define SCORE_POS Vector2f(1280 * 90 / 100, 720 * 15 / 100)
+#pragma region Player
+
 #define RANDOM_POS Vector2f(Random(1000,0),Random(1000,0))
-#define MULTI_MOB(name,x)for(int i = 0 ; i < x ; i++)\
-{\
-name\
-};
+#define ALL_ASSAULT new Assault({MobID::M_WOLF,MobID::M_WOLF},{5,5},3)
 
 
 #pragma region Wolf

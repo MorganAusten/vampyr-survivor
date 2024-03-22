@@ -10,7 +10,8 @@ ActorSpawner::ActorSpawner(Actor* _owner)
 
 void ActorSpawner::SpawnActor(const MobID& _mob, const Vector2f& _pos)
 {
-	switch (_mob)
+	cout << "[ActorSpawner::SpawnActor] => here" << endl;
+	/*switch (_mob)
 	{
 		case M_WOLF:
 		{
@@ -19,19 +20,19 @@ void ActorSpawner::SpawnActor(const MobID& _mob, const Vector2f& _pos)
 		}
 		default:
 			break;
-	}
+	}*/
 }
 
 void ActorSpawner::SpawnActor(const BuildingID& _building,const Vector2f& _pos)
 {
-	switch (_building)
-	{
-	case B_BARRIER:
-	{
-		//MOB_WOLF(GetShapePosition(), 100);
-		break;
-	}
-	default:
-		break;
-	}
+	//switch (_building)
+	//{
+	//case B_BARRIER:
+	//{
+	//	//MOB_WOLF(GetShapePosition(), 100);
+	//	break;
+	//}
+	//default:
+	//	break;
+	//}
 }
