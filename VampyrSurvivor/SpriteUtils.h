@@ -3,8 +3,14 @@
 #include "Animation.h"
 #include "Macro.h"
 
+#pragma region Assault
+#define ASSAULT_W1_0 new Assault(vector<Mob*> {MULTI_MOB(MOB_WOLF,5)});
+#define ASSAULT_W1_1 new Assault(vector<Mob*> {MULTI_MOB(MOB_WOLF,6)});
+#define ASSAULT_W1_2 new Assault(vector<Mob*> {MULTI_MOB(MOB_WOLF,7)});
+#pragma endregion Assault
+
 #define RANDOM_POS Vector2f(Random(1000,0),Random(1000,0))
-#define MULTI_MOB(name,x)  for(int i = 0 ; i < x ; i++)\
+#define MULTI_MOB(name,x)for(int i = 0 ; i < x ; i++)\
 {\
 name\
 };

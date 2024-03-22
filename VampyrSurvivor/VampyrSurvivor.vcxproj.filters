@@ -79,6 +79,9 @@
     <Filter Include="Fichiers sources\Utils">
       <UniqueIdentifier>{3bbaef7d-2f05-4342-9cc7-1c1609a43159}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\Manager\Actor\Spawner">
+      <UniqueIdentifier>{cd94a84b-647d-492b-9fda-4a4196165a30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -238,6 +241,18 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Building.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Assault.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnerManager.cpp">
+      <Filter>Fichiers sources\Manager\Actor\Spawner</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawner.cpp">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorSpawner.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -409,6 +424,18 @@
     </ClInclude>
     <ClInclude Include="SpriteUtils.h">
       <Filter>Fichiers sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Assault.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnerManager.h">
+      <Filter>Fichiers sources\Manager\Actor\Spawner</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Fichiers sources\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorSpawner.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
