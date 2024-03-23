@@ -44,7 +44,7 @@ public:
 public:
 	inline void SetOwner(Spawner* _owner) { spawnerOwner = _owner; }
 	inline void SetOwner(Player* _owner) { playerOwner = _owner; }
-	inline void Start() { cout << "[Assault::Start()] =>  spawningTimerDuration: " << spawningTimer->GetDuration() << endl;  spawningTimer->Start(); }
+	inline void Start() { /*cout << "[Assault::Start()] =>  spawningTimerDuration: " << spawningTimer->GetDuration() << endl; */ spawningTimer->Start(); }
 	void Spawn();
 };
 

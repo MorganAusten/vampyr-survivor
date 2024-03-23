@@ -17,7 +17,7 @@ string Tile::GetPathWithType(const TileType& _type)
 
 	if (_type == TT_PATH)
 	{
-		int _random = Random(2, 0);
+		int _random = RandomInt(1);
 		return _names[_random];
 	}
 	else if (_type == TT_SPAWNER)
@@ -25,8 +25,8 @@ string Tile::GetPathWithType(const TileType& _type)
 		return 	"Spawner.png";
 	}
 
-	int _size = _names.size()-1;
-	int _random = Random(_size-1, 2);
+	int _size = (int)_names.size()-1;
+	int _random = RandomInt(_size, 2);
 	return _names[_random];
 }
 

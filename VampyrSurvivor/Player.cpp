@@ -12,7 +12,7 @@ Player::Player()
 Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data)
 {
 	viewZoom = ZOOM;
-	stat =new PlayerStat(20,0,0,BEETWEEN_WAVE_TIMER,CURRENT_MONEY_POS);
+	stat = new PlayerStat(20, 0, 0, BEETWEEN_WAVE_TIMER, CURRENT_MONEY_POS);
 	viewOffset = Vector2f(0, 0);
 	dammage = 20;
 	InitView();
@@ -68,6 +68,11 @@ void Player::InitView()
 
 void Player::OnClick()
 {
+	ApplyDammages();
+}
+
+void Player::ApplyDammages()
+{
 	Vector2f _halfWorldPosition = Vector2f(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 	Vector2f _mousePosition = InputManager::GetInstance().GetMousePosition() - _halfWorldPosition;
 	Vector2f _mousePositionOffset = Vector2f((_mousePosition.x + viewOffset.x * viewZoom) / viewZoom, (_mousePosition.y + viewOffset.y * viewZoom) / viewZoom);
@@ -80,17 +85,19 @@ void Player::OnClick()
 			FloatRect _rect = _shape->getGlobalBounds();
 			if (_rect.contains(_mousePositionOffset) && _mob->GetActorType() == ActorType::MOB)
 			{
-				cout << _mob->GetID() << endl;
-				cout << "TakesDamages" << endl;
 				_mob->TakeDamages(-dammage);
-				cout << "HP:" << _mob->GetLifeBar()->GetCurrentValue() << endl;
+				GainMoney();
 			}
 		}
 	}
+}
+
+void Player::GainMoney()
+{
 	stat->money++;
 	stat->score++;
-	string _money = to_string(stat->money);
-	stat->SetString(_money);
+	stat->SetStringMoney(stat->money);
+	stat->SetStringScore(stat->score);
 }
 
 void Player::Register()

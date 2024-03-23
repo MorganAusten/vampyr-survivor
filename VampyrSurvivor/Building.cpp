@@ -7,7 +7,7 @@ Building::Building() : Entity()
 }
 
 Building::Building(const string& _name, const ShapeData& _data, const CollisionType& _collisionType, const BuildingData& _bData,
-	const int _maxHp, const float _damage) : Entity(_name, _data, _collisionType,_maxHp,_damage)
+	const float _maxHp, const float _damage) : Entity(_name, _data, _collisionType,_maxHp,_damage)
 {
 	data = new BuildingData(_bData);
 }

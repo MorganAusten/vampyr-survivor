@@ -55,7 +55,6 @@ void ProgressBar::UpdateOriginAndPosition(const Vector2f& _size)
 
 void ProgressBar::UpdateHP(const float& _amount)
 {
-    cout << _amount << endl;;
     GetDrawable()->setScale(Vector2f(originalScaleValue * _amount, GetDrawable()->getScale().y));
 }
 

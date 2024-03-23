@@ -33,9 +33,23 @@ public:
 		canvas->AddWidget(waveTimerText);
 	}
 
-	void SetString(const string& _value)
+	void SetStringMoney(const int& _value)
 	{
-		moneyText->SetString(_value);
+		string _str = "gold: " + to_string(_value);
+		moneyText->SetString(_str);
+	}
+
+	void SetStringScore(const int& _value)
+	{
+		string _str = "score: " + to_string(_value);
+		scoreText->SetString(_str);
+	}
+
+	void SetStringWaveTimer(const int& _value)
+	{
+		waveTimerText->SetVisible(_value <= 0 ? false: true);
+		string _str = to_string(_value);
+		waveTimerText->SetString(_str);
 	}
 };
 
@@ -72,6 +86,8 @@ private:
 	void InitInput();
 	void InitView();
 	void OnClick();
+	void ApplyDammages();
+	void GainMoney();
 	virtual void Register() override;
 };
 

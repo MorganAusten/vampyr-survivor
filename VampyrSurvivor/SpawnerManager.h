@@ -17,7 +17,7 @@ public:
 	inline int SetBetweenWaveTime()const { return betweenWaveCurrentTime; }
 	inline int GetWavesLevel()const { return wavesLevel; }
 	inline void Register(Spawner* _spawner) { spawners.push_back(_spawner); }
-	inline void StartBeetwenWaveTimer() { cout << "[SpawnerManager::StartBeetwenWaveTimer] => start timer" << endl; betweenWaveTimer->Start(); }
+	inline void StartBeetwenWaveTimer() { /*cout << "[SpawnerManager::StartBeetwenWaveTimer] => start timer" << endl;*/ betweenWaveTimer->Start(); }
 	void EndWave();
 private:
 	void UpdateTimer();

@@ -13,7 +13,7 @@
 #define SCORE_POS Vector2f(1280 * 90 / 100, 720 * 15 / 100)
 #pragma region Player
 
-#define RANDOM_POS Vector2f(Random(1000,0),Random(1000,0))
+#define RANDOM_POS Vector2f(RandomInt(1000,0),RandomInt(1000,0))
 #define ALL_ASSAULT new Assault({MobID::M_WOLF,MobID::M_WOLF},{5,5},3)
 
 

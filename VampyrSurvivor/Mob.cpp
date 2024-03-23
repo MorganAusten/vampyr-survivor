@@ -21,7 +21,7 @@ void Mob::Update(const float _deltaTime)
 	if (_positionIndex >= _path.size() - 1)
 		IsToRemove();
 	GetComponent<MovementComponent>()->Update();
-	if(!lifeBar->GetCurrentValue()<=0 && !IsToRemove())
+	if (lifeBar->GetCurrentValue() > 0 && !IsToRemove())
 		lifeBar->SetShapePosition(GetShapePosition() + Vector2f(0, -50));
 }
 

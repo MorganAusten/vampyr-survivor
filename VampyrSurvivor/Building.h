@@ -31,7 +31,7 @@ public:
 public:
 	Building();
 	Building(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const BuildingData& _bData,
-	const int _maxHp,const float _damage = 0);
+	const float _maxHp,const float _damage = 0);
 	~Building();
 
 public:

@@ -19,7 +19,7 @@ using namespace sf;
 
 #define MAX_VALUE 3.40282346638e38f
 #define ZOOM 3
-#define BEETWEEN_WAVE_TIMER 10
+#define BEETWEEN_WAVE_TIMER 3
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
@@ -32,6 +32,7 @@ int GetUniqueID();
 float Length(Vector2f& _vector);
 
 Vector2f Normalize(Vector2f& _vector);
+int RandomInt(const int _max, const int _min = 0);
 float Distance(const float _first, const float _second);
 float Distance(const Vector2f& _first, const Vector2f& _second);
 float Distance(const float _first, const float _second);
@@ -46,6 +47,7 @@ static inline float Randn()
 template <typename T>
 T Random(const T _max, const T _min = T(0))
 {
+
 	return int(rand() % (int)_max) + _min;
 }
 

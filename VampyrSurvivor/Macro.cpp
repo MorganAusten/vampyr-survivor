@@ -22,6 +22,15 @@ Vector2f Normalize(Vector2f& _vector)
 	return _vector /= Length(_vector);
 }
 
+int RandomInt(const int _max, const int _min)
+{
+	random_device _rand;
+	mt19937 rng(_rand());
+	uniform_int_distribution<mt19937::result_type> dist6(_min, _max);
+	return dist6(rng);
+}
+
+
 float Distance(const float _first, const float _second)
 {
 	return abs(_first - _second);

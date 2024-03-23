@@ -13,8 +13,7 @@ SpawnerManager::SpawnerManager() : IManager()
 void SpawnerManager::UpdateTimer()
 {
 	betweenWaveCurrentTime--;
-	cout << betweenWaveCurrentTime << endl;
-	ActorManager::GetInstance().GetPlayer()->GetStat()->waveTimer = betweenWaveCurrentTime;
+	ActorManager::GetInstance().GetPlayer()->GetStat()->SetStringWaveTimer(betweenWaveCurrentTime);
 	if (betweenWaveCurrentTime == 0)
 	{
 		betweenWaveCurrentTime = BEETWEEN_WAVE_TIMER;
@@ -28,7 +27,7 @@ void SpawnerManager::StartWave()
 	switch (wavesLevel)
 	{
 	case 0:
-		StartAssaults(1);
+		StartAssaults(4);
 	}
 }
 
@@ -37,10 +36,10 @@ void SpawnerManager::StartAssaults(const int& _activeSpawner)
 	vector<int*> _retryRandValues = vector<int*>();
 	for (size_t i = 0; i < _activeSpawner; i++)
 	{
-		int _size = spawners.size();
-		int _rand = Random(_size);
+		int _size = (int)spawners.size();
+		int _rand = RandomInt(_size);
 		while (Contains(&_rand, _retryRandValues))
-			_rand = Random(_size);
+			_rand = RandomInt(_size);
 		spawners[_rand]->StartAssault();
 		_retryRandValues.push_back(&_rand);
 	}
