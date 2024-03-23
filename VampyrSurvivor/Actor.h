@@ -11,6 +11,7 @@ enum ActorType
 	NONE,
 	FIELD,
 	MOB,
+	SPAWNER,
 	GPE,
 };
 

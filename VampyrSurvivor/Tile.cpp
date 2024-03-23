@@ -10,34 +10,24 @@ string Tile::GetPathWithType(const TileType& _type)
 	vector<string> _names =
 	{
 		"Floor.png",
-		"Flower1.png",
-		"Flower2.png",
-		"Flower3.png",
-		"Flower4.png",
-		"Flower5.png",
-		"Flower6.png",
-		"Flower7.png",
-		"Flower8.png",
-		"Flower9.png",
-		"Flower10.png",
-		"Flower11.png",
-		"Flower12.png",
+		"Floor1.png",
+		"Tree.png",
+		"Tree1.png"
 	};
 
 	if (_type == TT_PATH)
 	{
-		return _names[0];
+		int _random = Random(2, 0);
+		return _names[_random];
 	}
 	else if (_type == TT_SPAWNER)
 	{
 		return 	"Spawner.png";
 	}
 
-	int _rand = Random((int)(_names.size()) - 1, 1);
-
-	//cout << _names[_rand] << endl;
-
-	return _names[_rand];
+	int _size = _names.size()-1;
+	int _random = Random(_size-1, 2);
+	return _names[_random];
 }
 
 Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _hasSpawner, bool _navigable) : Actor(STRING_ID("Tile"), ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
@@ -51,10 +41,12 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, boo
 	shape->setOrigin(Vector2f(0.f, 0.f));
 	if (hasSpawner)
 	{
-		cout << "coucou" << endl;
-		spawner = new Spawner({ {ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} ,
+		spawner = new Spawner(
+			{ 
+				{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} ,
 			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT},
-			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} });
+			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} 
+			}, _pos);
 	}
 }
 

@@ -20,6 +20,7 @@ public:
 	{
 		duration += _duration;
 	}
+	inline float GetDuration()const { return duration; }
 	float GetCurrentDuration() const
 	{
 		return currentDuration;

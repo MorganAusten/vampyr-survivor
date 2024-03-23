@@ -6,6 +6,7 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <random>
 #include "Actor.h"
 #include "ActorManager.h"
 
@@ -16,8 +17,9 @@ using namespace sf;
 #pragma warning (disable :4244) // warning cast argument T
 #pragma warning (disable :26495) // warning Always initialize
 
-#define MAX_VALUE 3.40282346638e38f;
-#define ZOOM 2
+#define MAX_VALUE 3.40282346638e38f
+#define ZOOM 3
+#define BEETWEEN_WAVE_TIMER 10
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720

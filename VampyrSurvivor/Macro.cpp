@@ -64,7 +64,6 @@ vector<string> GetWords(const string& _text, const bool _withSpaces)
 				continue;
 			}
 		}
-
 		_word += _letter;
 	}
 

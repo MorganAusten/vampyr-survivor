@@ -12,7 +12,7 @@ Player::Player()
 Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data)
 {
 	viewZoom = ZOOM;
-	stat =new PlayerStat(20,0,0,CURRENT_MONEY_POS);
+	stat =new PlayerStat(20,0,0,BEETWEEN_WAVE_TIMER,CURRENT_MONEY_POS);
 	viewOffset = Vector2f(0, 0);
 	dammage = 20;
 	InitView();
@@ -33,7 +33,7 @@ void Player::Update(const float _deltaTime)
 	{
 		view->move(direction * _deltaTime);
 		viewOffset += direction * _deltaTime;
-		cout << "(" << viewOffset.x << "," << viewOffset.y << ")" << endl;
+		//cout << "(" << viewOffset.x << "," << viewOffset.y << ")" << endl;
 	}
 }
 

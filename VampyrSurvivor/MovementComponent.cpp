@@ -37,7 +37,6 @@ void MovementComponent::Move()
 		if (positionIndex == owner->GetComponent<PathfindingComponent>()->GetPath().size() - 1)
 		{
 			_owner->PassedThePortal();
-			MOB_WOLF(RANDOM_POS,Random(10,2));
 			return;
 		}
 		lerpTimer = 0;

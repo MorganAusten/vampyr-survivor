@@ -3,6 +3,7 @@
 #include "InputManager.h"
 #include "TimerManager.h"
 #include "TextureManager.h"
+#include "SpawnerManager.h"
 #include "MenuManager.h"
 #include "PathfindingComponent.h"
 #include "Mob.h"
@@ -30,10 +31,7 @@ void Game::Start()
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),
 		});
-}
-
-void Game::Init()
-{
+	SpawnerManager::GetInstance().StartBeetwenWaveTimer();
 }
 
 void Game::InitMouseSprite()
@@ -85,15 +83,6 @@ void Game::DrawWorldUIs()
 			window.draw(*_widget->GetDrawable());
 		}
 	}
-}
-
-void Game::DrawMap()
-{
-
-}
-
-void Game::DrawActors()
-{
 }
 
 void Game::DrawUIs()
