@@ -19,7 +19,7 @@ using namespace sf;
 
 #define MAX_VALUE 3.40282346638e38f
 #define ZOOM 3
-#define BEETWEEN_WAVE_TIMER 3
+#define BEETWEEN_WAVE_TIMER 15
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720

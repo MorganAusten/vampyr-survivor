@@ -23,7 +23,6 @@ void AnimationComponent::InitAnimations(const vector<AnimationData>& _animations
 
         if (_index == 0)
         {
-            cout << _data.name << endl;
             RunAnimation(_data.name, 1.0f);
         }
 

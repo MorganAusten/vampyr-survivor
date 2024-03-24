@@ -7,6 +7,7 @@
 #include"Tile.h"
 
 using namespace sf;
+class Mob;
 
 class MovementComponent :public Component
 {
@@ -36,6 +37,7 @@ public:
     MovementComponent(Actor* _owner, const int _speed = 100);
 private:
     void Move();
+    void CheckAttackMode(Mob* _owner);
     inline void UpdateDirection() {
         Vector2f _direction = (destination - owner->GetShapePosition());
         direction = (Vector2i)Normalize(_direction);

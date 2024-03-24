@@ -27,7 +27,7 @@ void MovementComponent::Move()
 #pragma endregion cout
 	Mob* _owner = (Mob*)owner;
 	Shape* _shape = owner->GetShape();
-	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed *0.0001);
+	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed * 0.0001);
 	_shape->setPosition(_position);
 	if (lerpTimer >= 1 || owner->GetShapePosition() == destination)
 	{
@@ -40,6 +40,15 @@ void MovementComponent::Move()
 		positionIndex++;
 		ActualizeNextTile(owner->GetComponent<PathfindingComponent>()->GetPath()[positionIndex]);
 	}
+	if (_owner->GetSettings().currentTile)
+	{
+		CheckAttackMode(_owner);
+	}
+	//cout << lerpTimer << endl;
+}
+
+void MovementComponent::CheckAttackMode(Mob* _owner)
+{
 	bool _contains = _owner->GetSettings().currentTile->GetBounds().contains(_owner->GetShapePosition());
 	bool _hasObstacle = _owner->GetSettings().currentTile->GetPathParams().hasObstacle;
 	if (_contains && _hasObstacle)
@@ -47,7 +56,6 @@ void MovementComponent::Move()
 		_owner->GetSettings().attackMode = true;
 		return;
 	}
-	//cout << lerpTimer << endl;
 }
 
 
