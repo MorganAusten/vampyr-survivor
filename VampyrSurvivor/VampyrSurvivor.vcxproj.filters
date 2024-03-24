@@ -255,6 +255,9 @@
     <ClCompile Include="ActorSpawner.cpp">
       <Filter>Fichiers sources\Object</Filter>
     </ClCompile>
+    <ClCompile Include="ShopButton.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -436,6 +439,9 @@
     </ClInclude>
     <ClInclude Include="ActorSpawner.h">
       <Filter>Fichiers sources\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopButton.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

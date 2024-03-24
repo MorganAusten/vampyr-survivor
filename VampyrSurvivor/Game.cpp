@@ -14,7 +14,6 @@ RenderWindow Game::window;
 Brightness* Game::brightness;
 Map* Game::map;
 
-
 Game::Game()
 {
 }
@@ -33,7 +32,7 @@ void Game::Start()
 	InitMouseSprite();
 	Game::map = new Map();
 	window.setMouseCursorGrabbed(true);
-	//window.setMouseCursorVisible(false);
+	window.setMouseCursorVisible(false);
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),

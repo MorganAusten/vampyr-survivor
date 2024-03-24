@@ -76,6 +76,7 @@ class Player : public Actor
 	PlayerStat* stat;
 	Shop* shop;
 	int dammage;
+	bool canConstruct;
 
 public:
 	//TODO Remove(Test)

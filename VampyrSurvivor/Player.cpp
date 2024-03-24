@@ -19,6 +19,7 @@ Player::Player(const string& _name, const ShapeData& _data) : Actor(_name, _data
 	InitInput();
 	shop = new Shop("PlayerShop");
 	direction = { 0,0 };
+	canConstruct = false;
 	Register();
 }
 
@@ -55,7 +56,7 @@ void Player::InitInput()
 
 	new ActionMap("PlayerAction",
 		{
-			ActionData("MakeDamage",[this]() { if (!shop->isOpen())OnClick(); }, {Event::MouseButtonPressed, Mouse::Left}),
+			ActionData("MakeDamage",[this]() { OnClick(); }, {Event::MouseButtonPressed, Mouse::Left}),
 			ActionData("ToggleShop",[this]() {
 				shop->ToggleShop();
 				}, {Event::KeyPressed, Keyboard::B}),
@@ -70,7 +71,24 @@ void Player::InitView()
 
 void Player::OnClick()
 {
-	ApplyDammages();
+	if (!shop->isOpen() && !shop->ShowAvailableTiles())
+	{
+		ApplyDammages();
+	}
+
+	else if (!shop->isOpen() && shop->ShowAvailableTiles())
+	{
+		if (canConstruct)
+		{
+			Vector2f _halfWorldPosition = Vector2f(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+			Vector2f _mousePosition = InputManager::GetInstance().GetMousePosition() - _halfWorldPosition;
+			Vector2f _mousePositionOffset = Vector2f((_mousePosition.x + viewOffset.x * viewZoom) / viewZoom, (_mousePosition.y + viewOffset.y * viewZoom) / viewZoom);
+			shop->Construct(_mousePositionOffset);
+			canConstruct = false;
+			return;
+		}
+		canConstruct = true;
+	}
 
 	//shop->Construct();
 }
