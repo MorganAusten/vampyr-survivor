@@ -59,7 +59,7 @@ void Shop::InitShop()
 		}
 		ShopButton* _widget = new ShopButton(ShapeData(_weaponPosition + _shopWeaponSize / 2.f, _shopWeaponSize, GetPathWithId(_buildingData.id)),
 			ButtonData(
-				[&]() { 
+				[&]() {
 					selectedButton = (ShopButton*)HUD::GetInstance().GetButtonAtMousePos();
 					cout << ActorManager::GetInstance().GetPlayer()->GetStat()->money << endl;
 					cout << selectedButton->GetBuildingPrice() << endl;
@@ -67,11 +67,11 @@ void Shop::InitShop()
 					{
 						ToggleAvailableTiles();
 					}
-						ToggleShop();
-					 },
+					ToggleShop();
+				},
 				nullptr,
 				nullptr
-				), _buildingData.id, _buildingData.price);
+			), _buildingData.id, _buildingData.price);
 		_widget->GetDrawable()->setOutlineColor(Color::Blue);
 		AddWidget(_widget);
 		_weaponPosition.x += _shopWeaponSize.x + _shopWeaponSize.x / 2;
@@ -141,6 +141,7 @@ void Shop::Construct(const Vector2f& _position)
 			Building* _building = CreateBuildingWithButtonId(selectedButton->GetId(), _tile->GetShapePosition());
 			_tile->SetBuilding(_building);
 			_building->SetCurrentTile(_tile);
+			_tile->GetPathParams().hasObstacle = true;
 			ToggleAvailableTiles();
 			Player* _player = ActorManager::GetInstance().GetPlayer();
 			_player->GetStat()->money -= selectedButton->GetBuildingPrice();

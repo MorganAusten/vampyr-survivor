@@ -20,7 +20,6 @@ struct SaleableData
 class Shop : public Canvas
 {
 	vector<SaleableData> buildingsId;
-	vector<ShopButton*> buttons;
 	ShopButton* selectedButton;
 	int maxBuildings;
 	bool showAvailableTiles;
