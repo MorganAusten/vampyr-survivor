@@ -29,12 +29,14 @@ string Tile::GetPathWithType(const TileType& _type)
 		return 	"portalRings1.png";
 	}
 
+	
+
 	int _size = (int)_names.size()-1;
 	int _random = RandomInt(_size, 2);
 	return _names[_random];
 }
 
-Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _hasSpawner, bool _navigable) : Actor(STRING_ID("Tile"), ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)))
+Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, bool _hasSpawner, bool _navigable) : Actor(STRING_ID("Tile"), ShapeData(_pos, Vector2f(TILE_SIZE), GetPathWithType(_type)),FIELD)
 {
 	type = _type;
 	hasSpawner = _hasSpawner;

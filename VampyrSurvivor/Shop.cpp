@@ -102,6 +102,10 @@ void Shop::ToggleAvailableTiles()
 					{
 						_tile->GetShape()->setFillColor(Color::Green);
 					}
+					else
+					{
+						_tile->GetShape()->setFillColor(Color::Red);
+					}
 				}
 				else
 				{
@@ -127,7 +131,7 @@ void Shop::Construct(const Vector2f& _position)
 	Tile* _tile = HUD::GetInstance().GetTileAtPos(_position);
 	if (_tile)
 	{
-		if (_tile->GetType() == TT_GRASS)
+		if (_tile->GetType() != TT_PATH)
 		{
 			ToggleAvailableTiles();
 			return;
@@ -136,6 +140,7 @@ void Shop::Construct(const Vector2f& _position)
 		{
 			Building* _building = CreateBuildingWithButtonId(selectedButton->GetId(), _tile->GetShapePosition());
 			_tile->SetBuilding(_building);
+			_building->SetCurrentTile(_tile);
 			ToggleAvailableTiles();
 			Player* _player = ActorManager::GetInstance().GetPlayer();
 			_player->GetStat()->money -= selectedButton->GetBuildingPrice();

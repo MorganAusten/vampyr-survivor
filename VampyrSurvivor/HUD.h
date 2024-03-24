@@ -36,8 +36,8 @@ public:
 	{
 		for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
 		{
-			Tile* _tile = dynamic_cast<Tile*>(_actor);
-			if (_tile && _tile->GetShape()->getGlobalBounds().contains(_position))
+			Tile* _tile = (Tile*)(_actor);
+			if (_tile && _tile->GetActorType() == FIELD && _tile->GetShape()->getGlobalBounds().contains(_position))
 			{
 				return _tile;
 			}
