@@ -66,8 +66,8 @@ void Mob::ComputeNewPath()
 
 void Mob::PassedThePortal()
 {
-	//WaveManager::GetInstance()->DecreaseMobCounter()
 	Dies();
+	ActorManager::GetInstance().GetPlayer()->DecreaseLife();
 }
 
 void Mob::InitAnims()

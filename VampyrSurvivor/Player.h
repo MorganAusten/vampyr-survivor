@@ -8,18 +8,21 @@
 struct PlayerStat
 {
 	int dammage;
+	int life;
 	int money;
 	int score;
 	int waveTimer;
 	Label* moneyText;
 	Label* scoreText;
 	Label* waveTimerText;
+	Label* lifeText;
 	Canvas* canvas;
 public:
 
-	PlayerStat(const int& _dammage,const int& _money, const int& _level,const int& _waveTimer ,const Vector2f& _pos )
+	PlayerStat(const int& _dammage,const int& _life, const int& _money, const int& _level,const int& _waveTimer ,const Vector2f& _pos )
 	{
 		dammage = _dammage;
+		life = _life;
 		money = _money;
 		score = _money;
 		waveTimer = _waveTimer;
@@ -28,9 +31,11 @@ public:
 		moneyText = new Label(TextData(to_string(money), _position, "Font.ttf", 30, Color::Red));
 		scoreText = new Label(TextData(to_string(score), Vector2f(_position.x, _position.y + 20), "Font.ttf", 30, Color::White));
 		waveTimerText = new Label(TextData(to_string(waveTimer), Vector2f(20, _position.y), "Font.ttf", 30, Color::White));
+		lifeText = new Label(TextData(to_string(life), Vector2f(500, _position.y), "Font.ttf", 30, Color::Green));
 		canvas->AddWidget(moneyText);
 		canvas->AddWidget(scoreText);
 		canvas->AddWidget(waveTimerText);
+		canvas->AddWidget(lifeText);
 	}
 
 	void SetStringMoney(const int& _value)
@@ -50,6 +55,13 @@ public:
 		waveTimerText->SetVisible(_value <= 0 ? false: true);
 		string _str = to_string(_value);
 		waveTimerText->SetString(_str);
+	}
+
+	void SetStringLife(const int& _value)
+	{
+		lifeText->SetVisible(_value <= 0 ? false : true);
+		string _str = to_string(_value);
+		lifeText->SetString(_str);
 	}
 };
 
@@ -81,7 +93,7 @@ public:
 
 public:
 	virtual void Update(const float _deltaTime) override;
-
+	void DecreaseLife() { stat->life--; stat->SetStringLife(stat->life); }
 private:
 	void InitInput();
 	void InitView();
