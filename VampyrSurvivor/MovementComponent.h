@@ -13,7 +13,6 @@ class MovementComponent :public Component
     int positionIndex;
     int speed;
     float lerpTimer;
-    bool canMove;
     Vector2i direction;
     Vector2f origin;
     Vector2f destination;
@@ -22,9 +21,7 @@ public:
     inline void IncreasePositionIndex() { positionIndex++; }
     inline void ResetPositionIndex() { positionIndex = 0 ; }
     inline int GetPositionIndex()const { return positionIndex; }
-    inline bool GetCanMove(){ return canMove;}
     inline int GetSpeed() const {return speed;}
-    inline void SetCanMove(const bool _status){canMove = _status; }
     inline void SetDestination(const Vector2f& _destination)
     { 
         destination = Vector2f(_destination.x + TILE_SIZE.x/2, _destination.y + TILE_SIZE.y / 2);
@@ -44,5 +41,4 @@ private:
         direction = (Vector2i)Normalize(_direction);
     }
     void ActualizeNextTile(Tile* _nextTile);
-    void TryToMove();
 };

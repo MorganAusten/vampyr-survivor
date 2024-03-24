@@ -15,16 +15,23 @@ Brightness* Game::brightness;
 Map* Game::map;
 
 
+Game::Game()
+{
+}
+
 Game::~Game()
 {
 }
 
 void Game::Start()
 {
+	mainMenu = true;
+	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
+	if (mainMenu)
+		UpdateMenu();
 	player = new Player("Player", ShapeData());
 	InitMouseSprite();
 	Game::map = new Map();
-	window.create(VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Vampyr Survivor");
 	window.setMouseCursorGrabbed(true);
 	window.setMouseCursorVisible(false);
 	new ActionMap("Game",
@@ -41,17 +48,27 @@ void Game::InitMouseSprite()
 
 void Game::Update()
 {
-	UpdateWindow();
 }
 
-void Game::UpdateWindow()
+void Game::UpdateMenu()
+{
+	new Menu("MainMenu", this);
+	while (window.isOpen() && mainMenu)
+	{
+		InputManager::GetInstance().Update(window);
+		window.clear();
+		DrawUIs();
+		window.display();
+	}
+}
+
+void Game::UpdateGame()
 {
 	while (window.isOpen())
 	{
 		ActorManager::GetInstance().Update();
-		InputManager::GetInstance().Update(window);
-
 		TimerManager::GetInstance().Update();
+		InputManager::GetInstance().Update(window);
 		Vector2f _a = InputManager::GetInstance().GetWorldPosition();
 		Vector2f _b = Vector2f(mouse->GetShapeSize().x / 2.5f, mouse->GetShapeSize().y / 3.f);
 		Vector2f _result = Vector2f((_a.x - _b.x), (_a.y - _b.y));
@@ -70,7 +87,9 @@ void Game::UpdateWindow()
 		window.draw(*mouse->GetShape());
 		window.display();
 	}
+
 }
+
 
 void Game::DrawWorldUIs()
 {
@@ -105,7 +124,7 @@ void Game::Stop()
 void Game::Launch()
 {
 	Start();
-	Update();
+	UpdateGame();
 	Stop();
 }
 

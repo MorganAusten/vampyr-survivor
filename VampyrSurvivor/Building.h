@@ -8,6 +8,7 @@ struct BuildingData
 	int upgradeCost;
 	int maxLevel;
 	int wavesToUnlock;
+	bool isAttackable;
 
 public:
 	BuildingData() = default;
@@ -24,17 +25,22 @@ public:
 class Building : public Entity
 {
 	BuildingData* data;
+	Tile* currentTile;
 
 public:
-	virtual string GetPath() = 0;
 
 public:
 	Building();
 	Building(const string& _name, const ShapeData& _data, const CollisionType& _collisionType,const BuildingData& _bData,
 	const float _maxHp,const float _damage = 0);
 	~Building();
-
 public:
+	virtual string GetPath() = 0;
+	inline void SetCurrentTile(Tile* _currentTile) { currentTile = _currentTile; }
+	inline BuildingData* GetData() { return data; }
+	void TakeDamages(const float& _damages) override;
 	void Upgrade();
+private:
+	void Destroyed();
 };
 

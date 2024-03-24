@@ -4,7 +4,6 @@
 
 int main()
 {
-	Menu* _menu = new Menu("Menu");
 	Game _game;
 	_game.Launch();
 	return 0;

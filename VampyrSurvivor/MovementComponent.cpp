@@ -11,7 +11,6 @@ MovementComponent::MovementComponent(Actor* _owner, const int _speed) :Component
 	owner = _owner;
 	positionIndex = 0;
 	lerpTimer = 0;
-	canMove = true;
 	direction = Vector2i(0, 1);
 	collision = nullptr;
 	speed = _speed;
@@ -27,12 +26,10 @@ void MovementComponent::Move()
 	//cout << "[MovementComponent::Move] => Direction = (" << _position.x << "," << _position.y << ")" << endl;
 #pragma endregion cout
 	Mob* _owner = (Mob*)owner;
-
-	if (!canMove) return;
 	Shape* _shape = owner->GetShape();
 	const Vector2f& _position = VLinearInterp(destination, origin, lerpTimer, speed *0.0001);
 	_shape->setPosition(_position);
-	if (lerpTimer >= 1)
+	if (lerpTimer >= 1 || owner->GetShapePosition() == destination)
 	{
 		if (positionIndex == owner->GetComponent<PathfindingComponent>()->GetPath().size() - 1)
 		{
@@ -43,6 +40,14 @@ void MovementComponent::Move()
 		positionIndex++;
 		ActualizeNextTile(owner->GetComponent<PathfindingComponent>()->GetPath()[positionIndex]);
 	}
+	bool _contains = _owner->GetSettings().currentTile->GetBounds().contains(_owner->GetShapePosition());
+	bool _hasObstacle = _owner->GetSettings().currentTile->GetPathParams().hasObstacle;
+	if (_contains && _hasObstacle)
+	{
+		cout << "[MovementComponent::Move] => ATTACK" << endl;
+		_owner->GetSettings().attackMode = true;
+		return;
+	}
 	//cout << lerpTimer << endl;
 }
 
@@ -51,16 +56,13 @@ void MovementComponent::ActualizeNextTile(Tile* _nextTile)
 {
 	SetOrigin();
 	SetDestination(_nextTile->GetShapePosition());
+	Mob* _mob = (Mob*)owner;
+	_mob->GetSettings().currentTile = _nextTile;
 	UpdateDirection();
 }
 
-void MovementComponent::TryToMove()
-{
-	if (!canMove) return;
-	Move();
-}
 
 void MovementComponent::Update()
 {
-	TryToMove();
+	Move();
 }

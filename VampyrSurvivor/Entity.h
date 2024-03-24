@@ -22,5 +22,6 @@ public:
 	inline void SetHP(float _hp);
 	inline float GetMaxHp()const { return hp; }
 	inline void SetMaxHp(float _maxHP) { hp = _maxHP; }
+	virtual void TakeDamages(const float& _damages);
 };
 

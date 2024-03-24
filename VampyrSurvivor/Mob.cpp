@@ -16,13 +16,31 @@ Mob::Mob(const string& _name, const ShapeData& _data, const CollisionType& _coll
 
 void Mob::Update(const float _deltaTime)
 {
+	if (lifeBar->GetCurrentValue() > 0 && !IsToRemove())
+		lifeBar->SetShapePosition(GetShapePosition() + Vector2f(0, -50));
+
+	if (settings.attackMode && !attackTimer)
+	{
+		attackTimer = new Timer([&]() {AttackBuilding();}, seconds(2), true, true);
+	}
+	else if (attackTimer)
+		return;
 	vector<Tile*> _path = GetComponent<PathfindingComponent>()->GetPath();
 	int _positionIndex = GetComponent<MovementComponent>()->GetPositionIndex();
 	if (_positionIndex >= _path.size() - 1)
 		IsToRemove();
 	GetComponent<MovementComponent>()->Update();
-	if (lifeBar->GetCurrentValue() > 0 && !IsToRemove())
-		lifeBar->SetShapePosition(GetShapePosition() + Vector2f(0, -50));
+}
+
+void Mob::AttackBuilding()
+{
+	if (settings.currentTile->GetBuilding())
+		settings.currentTile->GetBuilding()->TakeDamages(damage);
+	else
+	{
+		settings.attackMode = false;
+		attackTimer->SetToRemove(true);
+	}
 }
 
 void Mob::TakeDamages(const float& _damages)

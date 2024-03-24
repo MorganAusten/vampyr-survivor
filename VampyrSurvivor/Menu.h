@@ -11,16 +11,17 @@
 #define PATH_POINTER "UIs/Menus/Pointer.png"
 #define FONT "Font.ttf"
 
+class Game;
+
 class Menu : public IManagable<string>
 {
 	bool isInit;
 	SoundData* sound;
 protected:
 	Canvas* canvas;
-	ShapeWidget* pointerLeft;
-	ShapeWidget* pointerRight;
-	Button* backButton;
-	Menu* owner;
+	Button* playButton;
+	Button* exitButton;
+	Game* game;
 public:
 	virtual void SetStatus(const bool _status, const bool _applyToWidgets = true)
 	{
@@ -32,21 +33,17 @@ public:
 
 		canvas->SetVisibilityStatus(_status, _applyToWidgets);
 	}
-	void SetOwner(Menu* _owner)
-	{
-		owner = _owner;
-	}
 	bool IsActive() const
 	{
 		return isInit && canvas->GetVisibilityStatus();
 	}
 
 public:
-	Menu(const string& _name, Menu* _owner = nullptr);
+	Menu(const string& _name,Game* _game);
 
 private:
 	virtual void Register() override;
-
+	void StartGame();
 protected:
 	void MovePointers(Button* _button);
 	void MovePointers(const Vector2f& _position, const Vector2f& _size);

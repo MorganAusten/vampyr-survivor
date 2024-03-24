@@ -30,3 +30,8 @@ inline void Entity::SetHP(float _hp)
 	hp -= _hp;
 	lifeBar->ChangeValue(_hp);
 }
+
+void Entity::TakeDamages(const float& _damages)
+{
+
+}

@@ -68,6 +68,17 @@ bool Contains(T* _valueToFind, const vector<T*>& _vector)
 	return false;
 }
 
+template <typename T>
+bool Contains(T _valueToFind, const vector<T>& _vector)
+{
+	for (T _value : _vector)
+	{
+		if (_value == _valueToFind) return true;
+	}
+
+	return false;
+}
+
 template<typename T>
 vector<T*> Reverse(vector<T*> _vector)
 {

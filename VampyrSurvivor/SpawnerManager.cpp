@@ -27,22 +27,23 @@ void SpawnerManager::StartWave()
 	switch (wavesLevel)
 	{
 	case 0:
-		StartAssaults(4);
+		StartAssaults(1);
 	}
 }
 
 void SpawnerManager::StartAssaults(const int& _activeSpawner)
 {
-	vector<int*> _retryRandValues = vector<int*>();
-	for (size_t i = 0; i < _activeSpawner; i++)
-	{
-		int _size = (int)spawners.size();
-		int _rand = RandomInt(_size);
-		while (Contains(&_rand, _retryRandValues))
-			_rand = RandomInt(_size);
-		spawners[_rand]->StartAssault();
-		_retryRandValues.push_back(&_rand);
-	}
+	spawners[0]->StartAssault();
+	//vector<int> _retryRandValues = vector<int>();
+	//for (size_t i = 0; i < _activeSpawner; i++)
+	//{
+	//	int _size = (int)spawners.size()-1;
+	//	int _rand = RandomInt(_size);
+	//	while (Contains(_rand, _retryRandValues))
+	//		_rand = RandomInt(_size);
+	//	spawners[_rand]->StartAssault();
+	//	_retryRandValues.push_back(_rand);
+	//}
 }
 
 void SpawnerManager::EndWave()

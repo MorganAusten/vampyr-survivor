@@ -33,7 +33,9 @@ class Tile : public Actor
 public:
 	Tile(const TileType& _type, const Vector2f& _pos,Building* _building = nullptr, bool _hasSpawner = false, bool _navigable = true);
 public:
-	FPathFinding& GetPathParams() { return pathfindingParam; }
+	inline FPathFinding& GetPathParams() { return pathfindingParam; }
+	inline void SetBuilding(Building* _building) { building = _building; }
+	inline Building* GetBuilding()const {return building; }
 	string GetPathWithType(const TileType& _type);
 	std::string ToString(Object* _object) override;
 	inline void AddSuccessor(int _successor) { pathfindingParam.successors.push_back(_successor); }

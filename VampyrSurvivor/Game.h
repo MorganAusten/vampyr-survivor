@@ -52,6 +52,7 @@ class Game
 	static Map* map;
 	Player* player;
 	ShapeObject* mouse;
+	bool mainMenu;
 private:
 	static Brightness* brightness;
 
@@ -70,16 +71,18 @@ public:
 	}
 
 public:
-	Game() = default;
+	Game();
 	~Game();
 
 public:
 	inline static Map* GetMap() { return map; }
+	inline void SetMainMenu(bool _value) { mainMenu = _value; }
 	void Start();
 	void Init();
 	void InitMouseSprite();
 	void Update();
-	void UpdateWindow();
+	void UpdateGame();
+	void UpdateMenu();
 #pragma region Draws
 
 	void DrawWorldUIs();

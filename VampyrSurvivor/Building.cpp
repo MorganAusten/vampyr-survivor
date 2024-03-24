@@ -1,5 +1,8 @@
 #include "Building.h"
 #include "ActorManager.h"
+#include "ProgressBar.h"
+#include "Tile.h"
+
 
 Building::Building() : Entity()
 {
@@ -10,6 +13,14 @@ Building::Building(const string& _name, const ShapeData& _data, const CollisionT
 	const float _maxHp, const float _damage) : Entity(_name, _data, _collisionType,_maxHp,_damage)
 {
 	data = new BuildingData(_bData);
+	data->isAttackable = true;
+}
+
+void Building::TakeDamages(const float& _damages)
+{
+	lifeBar->ChangeValue(_damages);
+	if (lifeBar->GetCurrentValue() <= 0)
+		Destroyed();
 }
 
 Building::~Building()
@@ -31,4 +42,10 @@ void Building::Upgrade()
 	damage = damage * data->level * 50 / 100;
 
 	data->upgradeCost = data->upgradeCost * 2;
+}
+
+void Building::Destroyed()
+{
+	currentTile->SetBuilding(nullptr);
+	SetToRemove(true);
 }

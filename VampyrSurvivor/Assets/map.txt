@@ -1,8 +1,8 @@
 ##P##S##P##
-##P##P##P##
-PPPPBPBPPPP
-##P##P##P##
-##B##P##B##
+##P##B##P##
+PPPPBBBPPPP
+##P##B##P##
+##B##B##B##
 SPPPPPPPPPS
 ##B##P##B##
 ##P##P##P##

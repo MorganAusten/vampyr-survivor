@@ -35,6 +35,12 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, boo
 	type = _type;
 	hasSpawner = _hasSpawner;
 	building = _building;
+	if (building)
+	{
+		building->SetCurrentTile(this);
+		if (building->GetData()->isAttackable)
+			pathfindingParam.hasObstacle;
+	}
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
 
