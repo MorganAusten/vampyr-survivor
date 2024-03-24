@@ -2,7 +2,7 @@
 #include "ShapeWidget.h"
 #include "Macro.h"
 #include "Barrier.h"
-#include "Button.h"
+#include "Tile.h"
 //ShapeData(const Vector2f& _position, const Vector2f& _size,
 //	const string& _path = "", const IntRect& _rect = IntRect())
 //	: Data(_position, _path)
@@ -22,6 +22,9 @@ Shop::Shop(const string& _name) : Canvas(_name)
 		"",
 	};
 	maxBuildings = 36;
+	alreadyClick = false;
+	showAvailableTiles = false;
+	SetVisibilityStatus(false);
 	InitShop();
 
 }
@@ -62,9 +65,9 @@ void Shop::InitShop()
 		}
 		Button* _widget = new Button(ShapeData(_weaponPosition + _shopWeaponSize / 2.f, _shopWeaponSize, GetPathWithId(_buildingId)),
 			ButtonData(
+				[&]() { ToggleShop(); ToggleAvailableTiles(); },
 				nullptr,
-				nullptr,
-				[&]() { cout << "Hello" << endl;; }
+				nullptr
 				)
 
 		);
@@ -82,7 +85,38 @@ void Shop::AddBuilding(const string& _buildingId)
 	buildingsId.push_back(_buildingId);
 }
 
+void Shop::ToggleAvailableTiles()
+{
+	showAvailableTiles = !showAvailableTiles;
+	for (Actor* _actor : ActorManager::GetInstance().GetAllValues())
+	{
+		Tile* _tile = dynamic_cast<Tile*>(_actor);
+		if (_tile)
+		{
+			if (showAvailableTiles)
+			{
+				if (!_tile->GetBuilding())
+				{
+					if (_tile->GetType() == TT_PATH)
+					{
+						_tile->GetShape()->setFillColor(Color::Green);
+					}
+				}
+				else
+				{
+					_tile->GetShape()->setFillColor(Color::Red);
+				}
+			}
+
+			else
+			{
+				_tile->GetShape()->setFillColor(Color::White);
+			}
+		}
+	}
+}
+
 void Shop::ToggleShop()
 {
-	isVisible = !isVisible;
+	SetVisibilityStatus(!isVisible);
 }

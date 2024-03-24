@@ -69,6 +69,8 @@ void Player::InitView()
 void Player::OnClick()
 {
 	ApplyDammages();
+
+	//shop->Construct();
 }
 
 void Player::ApplyDammages()

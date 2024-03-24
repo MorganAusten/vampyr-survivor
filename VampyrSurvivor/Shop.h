@@ -1,11 +1,14 @@
 #pragma once
 #include "Canvas.h"
 #include "Building.h"
+#include "Button.h"
 
 class Shop : public Canvas
 {
 	vector<string> buildingsId;
 	int maxBuildings;
+	bool showAvailableTiles;
+	bool alreadyClick;
 public:
 
 	Shop(const string& _name);
@@ -38,6 +41,7 @@ private:
 
 public:
 	void AddBuilding(const string& _buildingId);
+	void ToggleAvailableTiles();
 	void ToggleShop();
 };
 

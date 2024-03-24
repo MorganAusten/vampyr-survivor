@@ -33,7 +33,7 @@ void Game::Start()
 	InitMouseSprite();
 	Game::map = new Map();
 	window.setMouseCursorGrabbed(true);
-	window.setMouseCursorVisible(false);
+	//window.setMouseCursorVisible(false);
 	new ActionMap("Game",
 		{
 			ActionData("CloseWindow", [this]() { window.close(); }, {Event::KeyPressed,Keyboard::Escape}),
@@ -43,7 +43,7 @@ void Game::Start()
 
 void Game::InitMouseSprite()
 {
-	mouse = new ShapeObject(ShapeData({}, { 100,100 }, "cursor.png"));
+	mouse = new ShapeObject(ShapeData({}, { 100.f,100.f }, "cursor.png"));
 }
 
 void Game::Update()

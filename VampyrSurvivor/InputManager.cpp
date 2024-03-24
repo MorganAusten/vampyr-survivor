@@ -3,10 +3,6 @@
 
 bool InputManager::Update(RenderWindow& _window)
 {
-	/*if (!Joystick::isConnected(0))
-	{
-		cerr << "manette non connecter" << endl;
-	}*/
 
 	const Vector2i& _mousePosition = Mouse::getPosition(_window);
 	mousePosition = Vector2f(_mousePosition);
@@ -18,10 +14,6 @@ bool InputManager::Update(RenderWindow& _window)
 		if (_event.type == Event::Closed) _window.close();
 		if (_event.type == Event::Resized)
 		{
-			//
-			const FloatRect _visibleArea = FloatRect(0.0f, 0.0f, _event.size.width, _event.size.height);
-			//const FloatRect _visibleArea(0.0f, 0.0f,0.0f, 0.0f);
-			_window.setView(View(_visibleArea));
 			cout << "resized" << endl;
 		}
 		//HUD::GetInstance().Interact(worldPosition, _event.type);

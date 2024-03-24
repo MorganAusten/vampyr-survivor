@@ -9,6 +9,7 @@ using namespace std;
 enum ActorType
 {
 	NONE,
+	FOLLOWING,
 	FIELD,
 	MOB,
 	SPAWNER,

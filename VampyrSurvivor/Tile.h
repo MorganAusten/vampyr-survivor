@@ -39,6 +39,7 @@ public:
 	string GetPathWithType(const TileType& _type);
 	std::string ToString(Object* _object) override;
 	inline void AddSuccessor(int _successor) { pathfindingParam.successors.push_back(_successor); }
+	TileType GetType()const { return type; }
 	void ResetTileCost();
 
 	Tile operator=(const Tile& _other)
