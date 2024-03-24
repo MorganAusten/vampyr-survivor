@@ -1,6 +1,6 @@
 ##P##S##P##
 ##P##B##P##
-PPPPBBBPPPP
+PPPPBBPPPPP
 ##P##B##P##
 ##B##B##B##
 SPPPPPPPPPS
