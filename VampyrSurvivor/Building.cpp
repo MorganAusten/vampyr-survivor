@@ -47,5 +47,6 @@ void Building::Upgrade()
 void Building::Destroyed()
 {
 	currentTile->SetBuilding(nullptr);
+	currentTile->GetPathParams().hasObstacle = false;
 	SetToRemove(true);
 }

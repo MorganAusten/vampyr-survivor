@@ -44,7 +44,6 @@ void MovementComponent::Move()
 	bool _hasObstacle = _owner->GetSettings().currentTile->GetPathParams().hasObstacle;
 	if (_contains && _hasObstacle)
 	{
-		cout << "[MovementComponent::Move] => ATTACK" << endl;
 		_owner->GetSettings().attackMode = true;
 		return;
 	}

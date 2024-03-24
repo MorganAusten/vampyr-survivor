@@ -32,20 +32,16 @@ void Timer::Update(const float _deltaTime)
 		{
 			callback();
 		}
-
 		if (!isLoop)
 		{
 			Stop();
 		}
-
 		Reset();
 	}
-
 }
 
 void Timer::Start()
 {
-	Reset();
 	Resume();
 }
 

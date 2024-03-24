@@ -21,10 +21,12 @@ void Mob::Update(const float _deltaTime)
 
 	if (settings.attackMode && !attackTimer)
 	{
-		attackTimer = new Timer([&]() {AttackBuilding();}, seconds(2), true, true);
+		attackTimer = new Timer([&]() {AttackBuilding(); }, seconds(2), false, true);
+		attackTimer->Start();
 	}
-	else if (attackTimer)
+	if (attackTimer)
 		return;
+
 	vector<Tile*> _path = GetComponent<PathfindingComponent>()->GetPath();
 	int _positionIndex = GetComponent<MovementComponent>()->GetPositionIndex();
 	if (_positionIndex >= _path.size() - 1)
@@ -35,11 +37,12 @@ void Mob::Update(const float _deltaTime)
 void Mob::AttackBuilding()
 {
 	if (settings.currentTile->GetBuilding())
-		settings.currentTile->GetBuilding()->TakeDamages(damage);
+		settings.currentTile->GetBuilding()->TakeDamages(-damage);
 	else
 	{
 		settings.attackMode = false;
 		attackTimer->SetToRemove(true);
+		attackTimer = nullptr;
 	}
 }
 
@@ -72,12 +75,14 @@ void Mob::InitAnims()
 	AnimationData _animData = WOLF_WALK_ANIM;
 	AnimationData _animData2 = WOLF_ATTACK_ANIM;
 	AnimationData _animData3 = WOLF_DEATH_ANIM;
-	vector<AnimationData> _anims = { _animData, _animData2, _animData3};
+	vector<AnimationData> _anims = { _animData, _animData2, _animData3 };
 	InitAnimations(_anims);
 }
 
 void Mob::Dies()
 {
+	if (attackTimer)
+		attackTimer->SetToRemove(true);
 	SetToRemove(true);
 	canvas->Unregister(lifeBar);
 }

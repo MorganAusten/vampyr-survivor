@@ -24,6 +24,10 @@ string Tile::GetPathWithType(const TileType& _type)
 	{
 		return 	"Spawner.png";
 	}
+	else if (_type == TT_PORTAL)
+	{
+		return 	"portalRings1.png";
+	}
 
 	int _size = (int)_names.size()-1;
 	int _random = RandomInt(_size, 2);
@@ -39,11 +43,10 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, boo
 	{
 		building->SetCurrentTile(this);
 		if (building->GetData()->isAttackable)
-			pathfindingParam.hasObstacle;
+			pathfindingParam.hasObstacle = true;
 	}
 	pathfindingParam.navigable = _navigable;
 	pathfindingParam.map = Game::GetMap();
-
 	shape->setOrigin(Vector2f(0.f, 0.f));
 	if (hasSpawner)
 	{
@@ -54,6 +57,25 @@ Tile::Tile(const TileType& _type, const Vector2f& _pos, Building* _building, boo
 			{ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT,ALL_ASSAULT} 
 			}, _pos);
 	}
+	if (type == TT_PORTAL)
+	{
+		InitPortalAnims();
+	}
+}
+
+void Tile::InitPortalAnims()
+{
+	string _str = STRING_ID("Portal");
+	string _str1 = STRING_ID("Portal1");
+	string _str2 = STRING_ID("Portal2");
+	string _str3 = STRING_ID("Portal3");
+	string _str4 = STRING_ID("Portal4");
+	InitAnimations({ AnimationData(_str, Vector2f(0, 0), Vector2f(32, 32), ReadDirection::READ_RIGHT, false, 4, 0.1f,_str1),
+		AnimationData(_str1, Vector2f(0, 32), Vector2f(32, 32), ReadDirection::READ_RIGHT, false, 4, 0.1f,_str2),
+		AnimationData(_str2, Vector2f(0, 64), Vector2f(32, 32), ReadDirection::READ_RIGHT, false, 4, 0.1f,_str3),
+		AnimationData(_str3, Vector2f(0, 96), Vector2f(32, 32), ReadDirection::READ_RIGHT, false, 4, 0.1f,_str4),
+		AnimationData(_str4, Vector2f(0, 128), Vector2f(32, 32), ReadDirection::READ_RIGHT, false, 1, 0.1f,_str)
+		});
 }
 
 std::string Tile::ToString(Object* _object)

@@ -18,7 +18,7 @@ void SpawnerManager::UpdateTimer()
 	{
 		betweenWaveCurrentTime = BEETWEEN_WAVE_TIMER;
 		StartWave();
-		betweenWaveTimer->Stop();
+		betweenWaveTimer->Pause();
 	}
 }
 

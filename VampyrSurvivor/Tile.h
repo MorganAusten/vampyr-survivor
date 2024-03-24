@@ -7,7 +7,7 @@ class Spawner;
 
 enum TileType
 {
-	TT_NONE,TT_GRASS,TT_PATH,TT_SPAWNER
+	TT_NONE,TT_GRASS,TT_PATH,TT_SPAWNER,TT_PORTAL
 };
 
 struct FPathFinding
@@ -32,6 +32,7 @@ class Tile : public Actor
 
 public:
 	Tile(const TileType& _type, const Vector2f& _pos,Building* _building = nullptr, bool _hasSpawner = false, bool _navigable = true);
+	void InitPortalAnims();
 public:
 	inline FPathFinding& GetPathParams() { return pathfindingParam; }
 	inline void SetBuilding(Building* _building) { building = _building; }

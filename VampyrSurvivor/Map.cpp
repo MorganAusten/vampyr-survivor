@@ -29,6 +29,7 @@ void Map::InitMap()
 		{'P',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position)); }},
 		{'B',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PATH,_position,new Barrier(_position)));}},
 		{'S',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_SPAWNER,_position,nullptr,true)); }},
+		{'E',[this](const Vector2f& _position) {grid.push_back(new Tile(TT_PORTAL,_position)); }},
 	};
 
 	string _line;
