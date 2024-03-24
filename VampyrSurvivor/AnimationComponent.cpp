@@ -23,6 +23,7 @@ void AnimationComponent::InitAnimations(const vector<AnimationData>& _animations
 
         if (_index == 0)
         {
+            cout << _data.name << endl;
             RunAnimation(_data.name, 1.0f);
         }
 
@@ -33,7 +34,8 @@ void AnimationComponent::InitAnimations(const vector<AnimationData>& _animations
 
 void AnimationComponent::RunAnimation(const string& _name, const float _directionX)
 {
-    for (Animation* _animation : GetAllValues())
+    vector<Animation*> _values = GetAllValues();
+    for (Animation* _animation : _values)
     {
         if (_name == _animation->GetID())
         {

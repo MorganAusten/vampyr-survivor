@@ -41,13 +41,12 @@ void Assault::Spawn()
 		case S_MOB:
 			if (spawnIndex <= mobs.size() - 1)
 			{
-
 				spawnerOwner->GetActorSpawner()->SpawnActor(mobs[spawnIndex], spawnerOwner->GetShapePosition());
 				mobIndex++;
 			}
 			else
 			{
-				spawningTimer->Stop();
+				spawningTimer->Pause();
 				return;
 			}
 			break;

@@ -32,11 +32,9 @@ void Animation::SetNext()
                 owner->RunAnimation(data.linkedAnimation, directionX);
                 return;
             }
-
             Stop();
             return;
         }
-
         Reset();
     }
     currentIndex++;

@@ -3,7 +3,7 @@
 PPPPBBBPPPP
 ##P##B##P##
 ##B##B##B##
-SPPPPPPPPPS
+SPPPPEPPPPS
 ##B##P##B##
 ##P##P##P##
 PPPPBPBPPPP
